@@ -1,0 +1,391 @@
+/* ============================================
+   COMPANY PAGE STYLES
+   ============================================ */
+
+/* ============================================
+   Company Hero Section
+   ============================================ */
+.company-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-main), #44A08D);
+  text-align: center;
+}
+
+.company-hero__title {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 0 0 var(--spacing-4) 0;
+  position: relative;
+  z-index: 10;
+}
+
+.company-hero__subtitle {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  position: relative;
+  z-index: 10;
+  font-family: var(--font-family-heading);
+}
+
+.company-hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.company-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.9), rgba(68, 160, 141, 0.9));
+}
+
+/* ============================================
+   Company Overview Section
+   ============================================ */
+.company-overview {
+  padding: 120px 0;
+  background: var(--color-gray-100);
+}
+
+.company-table {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.company-table__row {
+  display: flex;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.company-table__row:last-child {
+  border-bottom: none;
+}
+
+.company-table__label {
+  width: 200px;
+  flex-shrink: 0;
+  padding: var(--spacing-6) var(--spacing-8);
+  background: var(--color-gray-100);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  font-size: var(--font-size-base);
+}
+
+.company-table__value {
+  flex: 1;
+  padding: var(--spacing-6) var(--spacing-8);
+  color: var(--color-gray-700);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.company-table__value ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.company-table__value ul li {
+  margin-bottom: var(--spacing-2);
+}
+
+.company-table__value ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   CEO Message Section
+   ============================================ */
+.ceo-message {
+  padding: 120px 0;
+  background: var(--color-white);
+}
+
+.ceo-message__container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.ceo-message__image-wrapper {
+  width: 100%;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.ceo-message__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ceo-message__title {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-main);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.ceo-message__name {
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--spacing-8) 0;
+}
+
+.ceo-message__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.ceo-message__text p {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  line-height: 2.0;
+  margin: 0;
+}
+
+/* ============================================
+   Philosophy Section
+   ============================================ */
+.philosophy {
+  padding: 120px 0;
+  background: var(--color-gray-100);
+}
+
+.philosophy__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-10);
+}
+
+.philosophy-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-12);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.philosophy-card__icon {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.philosophy-card__subtitle {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+.philosophy-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ============================================
+   History Section
+   ============================================ */
+.history {
+  padding: 120px 0;
+  background: var(--color-white);
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-primary-main);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: var(--spacing-12);
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__marker {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary-main);
+  border: 4px solid var(--color-white);
+  box-shadow: 0 0 0 2px var(--color-primary-main);
+  z-index: 10;
+}
+
+.timeline__content {
+  background: var(--color-gray-100);
+  padding: var(--spacing-6);
+  border-radius: var(--border-radius-md);
+}
+
+.timeline__date {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-main);
+  margin: 0 0 var(--spacing-3) 0;
+}
+
+.timeline__description {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  margin: 0;
+}
+
+/* ============================================
+   Access Map Section
+   ============================================ */
+.access-map {
+  padding: 120px 0;
+  background: var(--color-gray-100);
+}
+
+.access-map__container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-10);
+  align-items: start;
+}
+
+.access-map__map {
+  width: 100%;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.access-map__info {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-10);
+  box-shadow: var(--shadow-md);
+}
+
+.access-map__info-title {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--spacing-6) 0;
+}
+
+.access-map__address {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0 0 var(--spacing-8) 0;
+}
+
+.access-map__access-info h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--spacing-4) 0;
+}
+
+.access-map__access-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-8) 0;
+}
+
+.access-map__access-info ul li {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-3);
+  padding-left: var(--spacing-6);
+  position: relative;
+}
+
+.access-map__access-info ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-main);
+  font-weight: var(--font-weight-bold);
+}
+
+.access-map__hours {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  margin: 0;
+}
+
+/* ============================================
+   Contact CTA Section
+   ============================================ */
+.contact-cta {
+  padding: 120px 0;
+  background: var(--color-primary-main);
+}
+
+.contact-cta__content {
+  text-align: center;
+  color: var(--color-white);
+}
+
+.contact-cta__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 0 0 var(--spacing-6) 0;
+}
+
+.contact-cta__description {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 var(--spacing-10) 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.contact-cta__buttons {
+  display: flex;
+  gap: var(--spacing-6);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+

@@ -1,0 +1,824 @@
+# ============================================
+# HOME PAGE - SERVICE OVERVIEW SECTION
+# サービス一覧セクション
+# ============================================
+
+  - id: "service_overview"
+    name: "サービス一覧"
+    type: "service_cards_grid"
+    
+    layout:
+      container_max_width: "1200px"
+      grid_columns: 3
+      grid_columns_tablet: 2
+      grid_columns_mobile: 1
+      gap: "32px"
+      
+    content:
+      heading:
+        label: "提供サービス一覧"
+        title: "SERVICE"
+        
+      services:
+        - id: "web_design"
+          name: "Web Design"
+          tagline: "「価値をカタチにする」Web Design"
+          price: "月額9,800円〜"
+          description: "WEB制作は月額9,800円から。最短3ヶ月でOK。Shopifyも対応可能。"
+          icon: "web_icon.svg"
+          image: "service_web.jpg"
+          link: "/web-design"
+          badge: "人気No.1"
+          features:
+            - "月額9,800円から"
+            - "最短3ヶ月契約"
+            - "オリジナルデザイン"
+            
+        - id: "ec_design"
+          name: "EC"
+          tagline: "EC売上をUPさせる"
+          description: "ShopifyでECサイトを構築。売上向上のための施策も実施。"
+          icon: "ec_icon.svg"
+          image: "service_ec.jpg"
+          link: "/shopify-design"
+          features:
+            - "Shopify専門"
+            - "売上向上施策"
+            - "運用サポート"
+            
+        - id: "marketing"
+          name: "Marketing"
+          tagline: "「価値を届ける」Marketing"
+          description: "WebとAd（広告）で集客を最大化。GoogleやSNS広告でLP制作・運用。"
+          icon: "marketing_icon.svg"
+          image: "service_marketing.jpg"
+          link: "/subscription-ad"
+          features:
+            - "Google広告"
+            - "SNS広告"
+            - "LP制作"
+            
+        - id: "tiktok_cm"
+          name: "TikTok CM"
+          tagline: "SPARK BUZZ"
+          description: "TikTok × インフルエンサーでバズを作る。動画制作から配信まで。"
+          icon: "tiktok_icon.svg"
+          image: "service_tiktok.jpg"
+          link: "/spark-buzz"
+          badge: "話題"
+          features:
+            - "TikTok動画制作"
+            - "インフルエンサー起用"
+            - "バズ施策"
+            
+        - id: "seo"
+          name: "SEO"
+          tagline: "月額8,000円〜のAI SEO"
+          price: "月額14,980円"
+          description: "AI活用したSEO対策で検索順位を向上。"
+          icon: "seo_icon.svg"
+          image: "service_seo.jpg"
+          link: "https://www.smart-seo.jp/"
+          external: true
+          features:
+            - "AI分析"
+            - "キーワード最適化"
+            - "月次レポート"
+            
+        - id: "dm_system"
+          name: "DM営業システムBEEAM"
+          description: "Instagram DMを使った自動営業ツール。月間400件以上のアプローチ。"
+          icon: "dm_icon.svg"
+          image: "service_dm.jpg"
+          link: "/instagram-dmsystem"
+          features:
+            - "自動DM送信"
+            - "月間400件"
+            - "フォロー自動化"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#4ECDC4"
+        
+      container:
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+      heading:
+        text_align: "center"
+        margin_bottom: "64px"
+        
+        label:
+          color: "#FFFFFF"
+          opacity: 0.9
+          
+        title:
+          color: "#FFFFFF"
+          
+      grid:
+        display: "grid"
+        grid_template_columns: "repeat(3, 1fr)"
+        gap: "32px"
+        
+        tablet:
+          grid_template_columns: "repeat(2, 1fr)"
+          
+        mobile:
+          grid_template_columns: "1fr"
+          gap: "24px"
+          
+      card:
+        background: "#FFFFFF"
+        border_radius: "16px"
+        padding: "40px"
+        display: "flex"
+        flex_direction: "column"
+        gap: "24px"
+        transition: "transform 0.3s ease, box-shadow 0.3s ease"
+        position: "relative"
+        
+        hover:
+          transform: "translateY(-8px)"
+          box_shadow: "0 20px 40px rgba(0, 0, 0, 0.15)"
+          
+      card_badge:
+        position: "absolute"
+        top: "16px"
+        right: "16px"
+        padding: "6px 16px"
+        background: "#FF6B6B"
+        color: "#FFFFFF"
+        font_size: "12px"
+        font_weight: 700
+        border_radius: "20px"
+        
+      card_icon:
+        width: "64px"
+        height: "64px"
+        
+      card_name:
+        font_size: "24px"
+        font_weight: 700
+        color: "#333333"
+        margin: "0"
+        
+      card_tagline:
+        font_size: "14px"
+        color: "#4ECDC4"
+        font_weight: 600
+        margin: "0"
+        
+      card_price:
+        font_size: "28px"
+        font_weight: 700
+        color: "#FF6B6B"
+        margin: "0"
+        
+      card_description:
+        font_size: "16px"
+        color: "#666666"
+        line_height: 1.75
+        margin: "0"
+        
+      card_features:
+        display: "flex"
+        flex_direction: "column"
+        gap: "12px"
+        list_style: "none"
+        padding: "0"
+        margin: "0"
+        
+      card_feature_item:
+        display: "flex"
+        align_items: "center"
+        gap: "8px"
+        font_size: "14px"
+        color: "#666666"
+        
+        before:
+          content: "'✓'"
+          color: "#51CF66"
+          font_weight: 700
+          
+      card_link:
+        display: "inline-flex"
+        align_items: "center"
+        justify_content: "center"
+        padding: "12px 24px"
+        background: "#4ECDC4"
+        color: "#FFFFFF"
+        font_size: "16px"
+        font_weight: 600
+        border_radius: "50px"
+        text_decoration: "none"
+        transition: "background 0.2s ease"
+        margin_top: "auto"
+        
+        hover:
+          background: "#3AB5AC"
+    
+    animations:
+      card_entrance:
+        type: "stagger"
+        base_delay: "0.1s"
+        increment: "0.1s"
+        animation: "fadeInUp 0.6s ease-out both"
+
+# ============================================
+# UNIQUE POINTS SECTION
+# 強みセクション
+# ============================================
+
+  - id: "unique_points"
+    name: "プロパゲートの強み"
+    type: "alternating_features"
+    
+    content:
+      heading:
+        label: "選ばれる理由"
+        title: "ONE&ONLY"
+        subtitle: "プロパゲートだけの強み"
+        
+      points:
+        - number: "POINT #1"
+          title: "1ヶ月からUP可能"
+          description: |
+            最短1ヶ月単位から契約可能。
+            短期プロジェクトにも柔軟に対応します。
+            必要な期間だけご利用いただけます。
+          image: "point1_monthly.jpg"
+          image_position: "left"
+          stats:
+            - label: "最短契約期間"
+              value: "1ヶ月"
+            - label: "平均継続期間"
+              value: "8ヶ月"
+              
+        - number: "POINT #2"
+          title: "LINEでOK"
+          description: |
+            面倒な打ち合わせ不要。
+            LINEで気軽に相談可能。
+            最短2分でご返信します。
+            24時間いつでもメッセージOK。
+          image: "point2_line.jpg"
+          image_position: "right"
+          icon: "line_app_icon.png"
+          stats:
+            - label: "平均返信時間"
+              value: "2分"
+            - label: "顧客満足度"
+              value: "98%"
+              
+        - number: "POINT #3"
+          title: "パートナー実績4,000社超"
+          description: |
+            大手企業から中小企業まで、
+            幅広い業界での実績があります。
+            信頼と実績に基づいた提案をします。
+          image: "point3_partners.jpg"
+          image_position: "left"
+          stats:
+            - label: "取引企業数"
+              value: "4,000+"
+            - label: "継続率"
+              value: "92%"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#F7F7F7"
+        
+      point:
+        display: "grid"
+        grid_template_columns: "1fr 1fr"
+        gap: "80px"
+        align_items: "center"
+        max_width: "1200px"
+        margin: "0 auto 120px"
+        padding: "0 40px"
+        
+        last_child:
+          margin_bottom: "0"
+          
+        tablet:
+          grid_template_columns: "1fr"
+          gap: "40px"
+          margin_bottom: "80px"
+          
+      point_reverse:
+        direction: "rtl"
+        
+        content:
+          direction: "ltr"
+          
+      point_content:
+        display: "flex"
+        flex_direction: "column"
+        gap: "24px"
+        
+      point_number:
+        font_size: "14px"
+        font_weight: 700
+        color: "#4ECDC4"
+        text_transform: "uppercase"
+        letter_spacing: "0.1em"
+        
+      point_title:
+        font_size: "40px"
+        font_weight: 700
+        color: "#333333"
+        line_height: 1.3
+        margin: "0"
+        
+        mobile:
+          font_size: "32px"
+          
+      point_description:
+        font_size: "18px"
+        color: "#666666"
+        line_height: 1.8
+        margin: "0"
+        
+      point_stats:
+        display: "grid"
+        grid_template_columns: "repeat(2, 1fr)"
+        gap: "24px"
+        margin_top: "32px"
+        
+      stat_item:
+        display: "flex"
+        flex_direction: "column"
+        gap: "8px"
+        
+      stat_value:
+        font_size: "48px"
+        font_weight: 700
+        color: "#FF6B6B"
+        line_height: 1
+        
+      stat_label:
+        font_size: "14px"
+        color: "#666666"
+        
+      point_image_wrapper:
+        position: "relative"
+        border_radius: "16px"
+        overflow: "hidden"
+        box_shadow: "0 20px 60px rgba(0, 0, 0, 0.15)"
+        
+      point_image:
+        width: "100%"
+        height: "auto"
+        display: "block"
+
+# ============================================
+# PARTNERS SECTION
+# パートナー企業セクション
+# ============================================
+
+  - id: "partners"
+    name: "パートナー企業"
+    type: "logo_carousel"
+    
+    content:
+      heading:
+        title: "PARTNERS"
+        subtitle: "取引実績のある企業様（一部）"
+        
+      logos:
+        - name: "HRC"
+          image: "logo_hrc.png"
+          description: "ホームページ3サイト制作"
+          
+        - name: "17LIVE"
+          image: "logo_17live.jpg"
+          
+        - name: "RGP"
+          image: "logo_rgp.png"
+          
+        - name: "Form Eyes"
+          image: "logo_formeyes.png"
+          
+        - name: "RGF"
+          image: "logo_rgf.png"
+          
+        - name: "MaxValu"
+          image: "logo_maxvalu.png"
+          
+        - name: "For The Win"
+          image: "logo_ftw.png"
+          
+        - name: "GoodStaff"
+          image: "logo_goodstaff.png"
+          
+        - name: "Lixi"
+          image: "logo_lixi.png"
+          
+        - name: "GA technologies"
+          image: "logo_ga.png"
+          
+        - name: "365日"
+          image: "logo_365.png"
+          
+      caption:
+        text: "パートナー企業4,000社超の実績"
+        highlight: "4,000社超"
+    
+    css:
+      section:
+        padding: "100px 0"
+        background: "#FFFFFF"
+        
+      carousel:
+        overflow: "hidden"
+        margin_top: "64px"
+        
+      carousel_track:
+        display: "flex"
+        gap: "60px"
+        animation: "scroll 40s linear infinite"
+        
+      logo_item:
+        flex_shrink: "0"
+        width: "180px"
+        height: "80px"
+        display: "flex"
+        align_items: "center"
+        justify_content: "center"
+        filter: "grayscale(100%)"
+        opacity: 0.6
+        transition: "all 0.3s ease"
+        
+        hover:
+          filter: "grayscale(0%)"
+          opacity: 1
+          
+      logo_image:
+        max_width: "100%"
+        max_height: "100%"
+        object_fit: "contain"
+        
+      caption:
+        text_align: "center"
+        margin_top: "48px"
+        
+      caption_text:
+        font_size: "18px"
+        color: "#666666"
+        
+      caption_highlight:
+        color: "#FF6B6B"
+        font_weight: 700
+    
+    javascript:
+      carousel_animation: |
+        // Infinite carousel
+        const track = document.querySelector('.carousel__track');
+        const items = document.querySelectorAll('.logo_item');
+        
+        // Clone items for seamless loop
+        items.forEach(item => {
+          const clone = item.cloneNode(true);
+          track.appendChild(clone);
+        });
+        
+        // Pause on hover
+        track.addEventListener('mouseenter', () => {
+          track.style.animationPlayState = 'paused';
+        });
+        
+        track.addEventListener('mouseleave', () => {
+          track.style.animationPlayState = 'running';
+        });
+
+# ============================================
+# CASE STUDIES SECTION
+# 制作実績セクション
+# ============================================
+
+  - id: "case_studies"
+    name: "制作実績"
+    type: "case_grid"
+    
+    content:
+      heading:
+        title: "CASES"
+        subtitle: "制作実績"
+        
+      filter_categories:
+        - "すべて"
+        - "WEB制作"
+        - "EC構築"
+        - "広告運用"
+        - "TikTok"
+        
+      cases:
+        - id: "bloom9"
+          client: "Bloom9"
+          category: "LP制作・SNS運用"
+          tags: ["LP制作", "SNS運用", "広告"]
+          description: "LP制作とSNS運用を実施。CVRを3倍に改善し、CPAを3,000円削減。"
+          image: "case_bloom9.jpg"
+          results:
+            - metric: "CVR"
+              before: "1.2%"
+              after: "3.6%"
+              improvement: "3倍"
+            - metric: "CPA"
+              before: "5,000円"
+              after: "2,000円"
+              improvement: "3,000円削減"
+          period: "2023年4月〜"
+          link: "/cases/bloom9"
+          
+        - id: "muumuu_aloha"
+          client: "MuuMuu Aloha"
+          category: "EC構築"
+          tags: ["Shopify", "EC", "売上向上"]
+          description: "Shopifyを使用したECサイト構築。売上を2.5倍に向上。"
+          image: "case_muumuu.jpg"
+          results:
+            - metric: "売上"
+              improvement: "2.5倍"
+            - metric: "顧客単価"
+              improvement: "40%向上"
+          period: "2022年10月〜"
+          
+        # ... more cases
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#F7F7F7"
+        
+      filter:
+        display: "flex"
+        justify_content: "center"
+        gap: "16px"
+        flex_wrap: "wrap"
+        margin_bottom: "64px"
+        
+      filter_button:
+        padding: "12px 24px"
+        background: "#FFFFFF"
+        border: "2px solid #E5E5E5"
+        border_radius: "50px"
+        font_size: "14px"
+        font_weight: 600
+        color: "#666666"
+        cursor: "pointer"
+        transition: "all 0.2s ease"
+        
+        hover:
+          border_color: "#4ECDC4"
+          color: "#4ECDC4"
+          
+        active:
+          background: "#4ECDC4"
+          border_color: "#4ECDC4"
+          color: "#FFFFFF"
+          
+      grid:
+        display: "grid"
+        grid_template_columns: "repeat(2, 1fr)"
+        gap: "32px"
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+        tablet:
+          grid_template_columns: "1fr"
+          
+      case_card:
+        background: "#FFFFFF"
+        border_radius: "16px"
+        overflow: "hidden"
+        box_shadow: "0 4px 12px rgba(0, 0, 0, 0.08)"
+        transition: "all 0.3s ease"
+        display: "flex"
+        flex_direction: "column"
+        
+        hover:
+          transform: "translateY(-8px)"
+          box_shadow: "0 12px 32px rgba(0, 0, 0, 0.12)"
+          
+      case_image_wrapper:
+        position: "relative"
+        padding_top: "60%"
+        overflow: "hidden"
+        
+      case_image:
+        position: "absolute"
+        top: "0"
+        left: "0"
+        width: "100%"
+        height: "100%"
+        object_fit: "cover"
+        transition: "transform 0.5s ease"
+        
+        hover:
+          transform: "scale(1.1)"
+          
+      case_content:
+        padding: "32px"
+        
+      case_category:
+        font_size: "14px"
+        color: "#4ECDC4"
+        font_weight: 600
+        margin_bottom: "12px"
+        
+      case_client:
+        font_size: "24px"
+        font_weight: 700
+        color: "#333333"
+        margin_bottom: "16px"
+        
+      case_description:
+        font_size: "16px"
+        color: "#666666"
+        line_height: 1.75
+        margin_bottom: "24px"
+        
+      case_results:
+        display: "grid"
+        grid_template_columns: "repeat(2, 1fr)"
+        gap: "16px"
+        padding: "24px 0"
+        border_top: "1px solid #E5E5E5"
+        
+      result_item:
+        display: "flex"
+        flex_direction: "column"
+        gap: "4px"
+        
+      result_metric:
+        font_size: "12px"
+        color: "#999999"
+        text_transform: "uppercase"
+        
+      result_improvement:
+        font_size: "20px"
+        font_weight: 700
+        color: "#FF6B6B"
+
+# ============================================
+# ABOUT PREVIEW SECTION
+# 会社情報プレビュー
+# ============================================
+
+  - id: "about_preview"
+    name: "会社情報プレビュー"
+    type: "split_content_cta"
+    
+    content:
+      heading:
+        title: "ABOUT"
+        
+      body:
+        text: |
+          株式会社プロパゲートは、
+          挑戦者の価値を届けるために
+          2020年に設立されました。
+          
+          「世界で唯一、あなただけのプラットフォーム」
+          を作り上げることをミッションに、
+          これまで4,000社以上の企業様を
+          サポートしてまいりました。
+          
+      stats:
+        - value: "2020年"
+          label: "設立"
+        - value: "4,000+"
+          label: "取引企業数"
+        - value: "92%"
+          label: "継続率"
+          
+      cta:
+        text: "会社情報を見る"
+        link: "/company"
+        style: "outline"
+        
+      image: "about_office.jpg"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "linear-gradient(135deg, #4ECDC4, #44A08D)"
+        
+      container:
+        display: "grid"
+        grid_template_columns: "1fr 1fr"
+        gap: "80px"
+        align_items: "center"
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+        tablet:
+          grid_template_columns: "1fr"
+          gap: "60px"
+          
+      content:
+        color: "#FFFFFF"
+        
+      title:
+        font_size: "48px"
+        color: "#FFFFFF"
+        margin_bottom: "32px"
+        
+      body_text:
+        font_size: "18px"
+        line_height: 1.8
+        margin_bottom: "40px"
+        opacity: 0.95
+        
+      stats_grid:
+        display: "grid"
+        grid_template_columns: "repeat(3, 1fr)"
+        gap: "32px"
+        margin_bottom: "40px"
+        
+      stat_value:
+        font_size: "40px"
+        font_weight: 700
+        color: "#FFFFFF"
+        line_height: 1
+        
+      stat_label:
+        font_size: "14px"
+        color: "#FFFFFF"
+        opacity: 0.9
+        margin_top: "8px"
+        
+      image_wrapper:
+        border_radius: "16px"
+        overflow: "hidden"
+        box_shadow: "0 20px 60px rgba(0, 0, 0, 0.2)"
+
+# ============================================
+# CONTACT CTA SECTION
+# お問い合わせCTA
+# ============================================
+
+  - id: "contact_cta"
+    name: "お問い合わせCTA"
+    type: "centered_cta"
+    
+    content:
+      heading:
+        title: "CONTACT"
+        subtitle: "まずはお気軽にご相談ください"
+        
+      description: |
+        LINEで24時間相談受付中。
+        お気軽にお問い合わせください。
+        
+      buttons:
+        - text: "LINEで相談する"
+          link: "https://line.me/..."
+          icon: "line_icon.svg"
+          style: "primary_large"
+          
+        - text: "資料をダウンロード"
+          link: "/question"
+          icon: "download_icon.svg"
+          style: "outline_white"
+    
+    css:
+      section:
+        padding: "100px 0"
+        background: "#4ECDC4"
+        text_align: "center"
+        
+      container:
+        max_width: "800px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+      title:
+        font_size: "48px"
+        color: "#FFFFFF"
+        margin_bottom: "16px"
+        
+      subtitle:
+        font_size: "24px"
+        color: "#FFFFFF"
+        margin_bottom: "32px"
+        opacity: 0.95"
+        
+      description:
+        font_size: "18px"
+        color: "#FFFFFF"
+        line_height: 1.8
+        margin_bottom: "48px"
+        opacity: 0.9
+        
+      buttons:
+        display: "flex"
+        justify_content: "center"
+        gap: "24px"
+        flex_wrap: "wrap"

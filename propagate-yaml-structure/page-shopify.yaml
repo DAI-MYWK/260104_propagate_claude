@@ -1,0 +1,585 @@
+# ============================================
+# SHOPIFY EC PAGE - COMPLETE SPECIFICATION
+# Shopify ECページ完全仕様書
+# ============================================
+
+page:
+  id: "shopify_design"
+  path: "/shopify-design"
+  
+  meta:
+    title: "Shopify EC構築サービス | Propagate Inc."
+    description: "EC売上をUPさせるShopifyサイト構築。月額49,800円、8ヶ月契約。SNS連携・決済システム・配送管理まで完全サポート。"
+    keywords: "Shopify,EC構築,ネットショップ,オンラインストア,EC売上向上"
+    og_image: "/assets/images/og_shopify.jpg"
+
+sections:
+  # ==========================================
+  # PAGE HERO
+  # ==========================================
+  - id: "page_hero"
+    name: "ページヒーロー"
+    type: "page_hero_gradient"
+    
+    content:
+      heading: "EC売上をUPさせる<br>Shopifyサイト構築"
+      features:
+        - "月額49,800円〜"
+        - "最低契約期間8ヶ月"
+        - "SNS連携対応"
+      cta:
+        text: "資料をダウンロード"
+        link: "/question"
+    
+    css:
+      section:
+        background: "linear-gradient(135deg, #96CEB4, #FFEAA7)"
+
+  # ==========================================
+  # EC INTRODUCTION
+  # ==========================================
+  - id: "ec_intro"
+    name: "ECサイト紹介"
+    type: "text_content_centered"
+    
+    content:
+      heading: "ECサイトで売上を最大化"
+      body: |
+        Shopifyは世界No.1のECプラットフォーム。
+        
+        SEO対策・SNS連携・決済システムが標準装備。
+        初心者でも簡単に本格的なネットショップを運営できます。
+        
+        私たちは、デザインから構築、運用サポートまで、
+        EC売上向上のための施策を総合的に提供します。
+      stats:
+        - value: "世界No.1"
+          label: "ECプラットフォーム"
+        - value: "175カ国"
+          label: "利用国"
+        - value: "数百万店舗"
+          label: "導入実績"
+
+  # ==========================================
+  # SHOPIFY FEATURES
+  # ==========================================
+  - id: "features"
+    name: "Shopifyの特徴"
+    type: "icon_feature_grid"
+    
+    content:
+      heading:
+        title: "Shopify features"
+        subtitle: "Shopifyならではの機能"
+        
+      features:
+        - icon: "seo_icon.svg"
+          title: "SEO対策"
+          description: "検索エンジン最適化機能が標準搭載。meta タグ、URL構造、サイトマップなど自動生成。"
+          
+        - icon: "sns_icon.svg"
+          title: "SNS連携"
+          description: "Instagram・Facebook・TikTokと連携。SNSから直接商品を販売できます。"
+          
+        - icon: "payment_icon.svg"
+          title: "決済システム"
+          description: "クレジットカード・PayPal・Apple Pay・後払いなど多様な決済方法に対応。"
+          
+        - icon: "shipping_icon.svg"
+          title: "配送管理"
+          description: "FedEx・UPS・DHLと連携。送料自動計算・追跡番号発行も簡単。"
+          
+        - icon: "app_icon.svg"
+          title: "拡張機能"
+          description: "7,000以上のアプリで機能追加。メール配信・レビュー機能・在庫管理など。"
+          
+        - icon: "multi_currency_icon.svg"
+          title: "多言語・多通貨"
+          description: "50ヶ国以上の言語・通貨に対応。海外展開も簡単に実現できます。"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#F7F7F7"
+        
+      grid:
+        display: "grid"
+        grid_template_columns: "repeat(3, 1fr)"
+        gap: "40px"
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+        tablet:
+          grid_template_columns: "repeat(2, 1fr)"
+          
+        mobile:
+          grid_template_columns: "1fr"
+          
+      feature_card:
+        background: "#FFFFFF"
+        border_radius: "16px"
+        padding: "40px"
+        text_align: "center"
+        transition: "all 0.3s ease"
+        
+        hover:
+          transform: "translateY(-8px)"
+          box_shadow: "0 12px 32px rgba(0, 0, 0, 0.1)"
+          
+      feature_icon:
+        width: "80px"
+        height: "80px"
+        margin: "0 auto 24px"
+        
+      feature_title:
+        font_size: "20px"
+        font_weight: 700
+        color: "#333333"
+        margin_bottom: "16px"
+        
+      feature_description:
+        font_size: "16px"
+        color: "#666666"
+        line_height: 1.75
+
+  # ==========================================
+  # PRICING
+  # ==========================================
+  - id: "pricing"
+    name: "料金プラン"
+    type: "pricing_detail"
+    
+    content:
+      heading:
+        title: "Our package"
+        subtitle: "EC構築パッケージ"
+        
+      plan:
+        name: "EC構築プラン"
+        price: "月額49,800円"
+        duration: "8ヶ月契約"
+        total: "総額498,000円"
+        
+        features:
+          - category: "デザイン・構築"
+            items:
+              - "Shopifyテーマカスタマイズ"
+              - "トップページデザイン"
+              - "商品ページデザイン"
+              - "カート・チェックアウトページ"
+              - "会社概要・特定商取引法ページ"
+              
+          - category: "商品登録"
+            items:
+              - "商品登録（100商品まで）"
+              - "商品画像最適化"
+              - "商品説明文作成サポート"
+              
+          - category: "システム設定"
+            items:
+              - "決済設定（クレカ・後払い等）"
+              - "配送設定（送料・配送方法）"
+              - "税金設定"
+              - "ドメイン設定"
+              
+          - category: "マーケティング"
+            items:
+              - "SEO基本設定"
+              - "Google Analytics連携"
+              - "Facebook Pixel設定"
+              - "Instagram連携"
+              - "メールマーケティング設定"
+              
+          - category: "運用サポート"
+            items:
+              - "運用マニュアル提供"
+              - "管理画面操作レクチャー"
+              - "公開後1ヶ月間サポート"
+              
+        note: "※ 商品数が100点を超える場合は別途お見積もり"
+        
+        cta:
+          text: "お問い合わせ"
+          link: "/question"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#FFFFFF"
+        
+      plan_card:
+        max_width: "900px"
+        margin: "0 auto"
+        background: "#FFFFFF"
+        border: "2px solid #E5E5E5"
+        border_radius: "24px"
+        padding: "60px"
+        
+        mobile:
+          padding: "40px 20px"
+          
+      plan_header:
+        text_align: "center"
+        padding_bottom: "40px"
+        border_bottom: "1px solid #E5E5E5"
+        margin_bottom: "40px"
+        
+      plan_name:
+        font_size: "28px"
+        font_weight: 700
+        color: "#333333"
+        margin_bottom: "16px"
+        
+      plan_price:
+        font_size: "48px"
+        font_weight: 700
+        color: "#FF6B6B"
+        margin_bottom: "8px"
+        
+      plan_duration:
+        font_size: "18px"
+        color: "#666666"
+        margin_bottom: "16px"
+        
+      plan_total:
+        font_size: "24px"
+        font_weight: 600
+        color: "#4ECDC4"
+        
+      features_section:
+        margin_bottom: "32px"
+        
+      features_category:
+        font_size: "18px"
+        font_weight: 700
+        color: "#333333"
+        margin_bottom: "16px"
+        padding_left: "24px"
+        position: "relative"
+        
+        before:
+          content: "''"
+          position: "absolute"
+          left: "0"
+          top: "8px"
+          width: "4px"
+          height: "20px"
+          background: "#4ECDC4"
+          
+      features_list:
+        list_style: "none"
+        padding: "0"
+        margin: "0 0 32px 24px"
+        
+      feature_item:
+        padding: "12px 0"
+        font_size: "16px"
+        color: "#666666"
+        position: "relative"
+        padding_left: "32px"
+        
+        before:
+          content: "'✓'"
+          position: "absolute"
+          left: "0"
+          color: "#51CF66"
+          font_weight: 700
+
+  # ==========================================
+  # BENEFITS
+  # ==========================================
+  - id: "benefits"
+    name: "Shopifyのメリット"
+    type: "numbered_benefits"
+    
+    content:
+      heading:
+        title: "Shopify を選ぶ5つのメリット"
+        
+      benefits:
+        - number: "01"
+          title: "SNSとの親和性が高い"
+          description: "InstagramやTikTokから直接商品を販売可能。ソーシャルコマースに最適です。"
+          icon: "sns_integration.svg"
+          
+        - number: "02"
+          title: "海外展開に強い"
+          description: "50ヶ国以上、多言語・多通貨対応。グローバルビジネスを簡単に展開できます。"
+          icon: "global.svg"
+          
+        - number: "03"
+          title: "配送業者と連携"
+          description: "FedEx・UPS・DHLと自動連携。送料計算・追跡番号発行が簡単です。"
+          icon: "shipping.svg"
+          
+        - number: "04"
+          title: "7,000以上のアプリ"
+          description: "機能拡張が簡単。在庫管理・メール配信・レビュー機能など自由に追加できます。"
+          icon: "apps.svg"
+          
+        - number: "05"
+          title: "高いセキュリティ"
+          description: "PCI DSS準拠。クレジットカード情報は安全に管理され、顧客に安心を提供します。"
+          icon: "security.svg"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#F7F7F7"
+        
+      benefits_list:
+        max_width: "800px"
+        margin: "0 auto"
+        display: "flex"
+        flex_direction: "column"
+        gap: "40px"
+        
+      benefit_item:
+        display: "flex"
+        gap: "32px"
+        align_items: "flex-start"
+        
+      benefit_number:
+        width: "80px"
+        height: "80px"
+        flex_shrink: "0"
+        background: "#4ECDC4"
+        color: "#FFFFFF"
+        border_radius: "50%"
+        display: "flex"
+        align_items: "center"
+        justify_content: "center"
+        font_size: "24px"
+        font_weight: 700
+        
+      benefit_content:
+        flex: "1"
+        
+      benefit_title:
+        font_size: "24px"
+        font_weight: 700
+        color: "#333333"
+        margin_bottom: "12px"
+        
+      benefit_description:
+        font_size: "16px"
+        color: "#666666"
+        line_height: 1.75
+
+  # ==========================================
+  # FLOW
+  # ==========================================
+  - id: "flow"
+    name: "制作の流れ"
+    type: "process_timeline"
+    
+    content:
+      heading:
+        title: "Flow"
+        subtitle: "制作の流れ（8ヶ月）"
+        
+      steps:
+        - step: "01"
+          title: "ヒアリング・要件定義"
+          duration: "1ヶ月目"
+          description: "ビジネスモデル、商品、ターゲット顧客をヒアリング。最適な構成を提案します。"
+          tasks:
+            - "事業内容・商品ヒアリング"
+            - "競合調査"
+            - "サイト構成案作成"
+            
+        - step: "02"
+          title: "デザイン制作"
+          duration: "2〜3ヶ月目"
+          description: "ブランドイメージに合わせたオリジナルデザインを作成します。"
+          tasks:
+            - "トップページデザイン"
+            - "商品ページデザイン"
+            - "デザイン修正（2回まで）"
+            
+        - step: "03"
+          title: "Shopify構築"
+          duration: "4〜6ヶ月目"
+          description: "Shopifyテーマをカスタマイズし、機能を実装します。"
+          tasks:
+            - "テーマカスタマイズ"
+            - "決済・配送設定"
+            - "商品登録"
+            - "テスト"
+            
+        - step: "04"
+          title: "公開・運用サポート"
+          duration: "7〜8ヶ月目"
+          description: "サイト公開後、運用マニュアル提供と1ヶ月間のサポートを実施します。"
+          tasks:
+            - "本番公開"
+            - "運用マニュアル提供"
+            - "管理画面レクチャー"
+            - "1ヶ月間サポート"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#FFFFFF"
+        
+      timeline:
+        max_width: "900px"
+        margin: "0 auto"
+        position: "relative"
+        
+        before:
+          content: "''"
+          position: "absolute"
+          left: "50%"
+          top: "0"
+          bottom: "0"
+          width: "2px"
+          background: "#E5E5E5"
+          transform: "translateX(-50%)"
+          
+        mobile:
+          before:
+            left: "20px"
+            transform: "none"
+            
+      step_item:
+        display: "grid"
+        grid_template_columns: "1fr 100px 1fr"
+        gap: "40px"
+        margin_bottom: "80px"
+        
+        last_child:
+          margin_bottom: "0"
+          
+        mobile:
+          grid_template_columns: "60px 1fr"
+          gap: "20px"
+          margin_bottom: "60px"
+          
+        nth_child_even:
+          direction: "rtl"
+          
+          content:
+            direction: "ltr"
+            text_align: "right"
+            
+      step_number:
+        width: "100px"
+        height: "100px"
+        background: "#4ECDC4"
+        color: "#FFFFFF"
+        border_radius: "50%"
+        display: "flex"
+        align_items: "center"
+        justify_content: "center"
+        font_size: "32px"
+        font_weight: 700
+        position: "relative"
+        z_index: 2
+        
+        mobile:
+          width: "60px"
+          height: "60px"
+          font_size: "24px"
+          
+      step_content:
+        padding_top: "10px"
+        
+      step_title:
+        font_size: "24px"
+        font_weight: 700
+        color: "#333333"
+        margin_bottom: "8px"
+        
+      step_duration:
+        font_size: "14px"
+        color: "#4ECDC4"
+        font_weight: 600
+        margin_bottom: "16px"
+        
+      step_description:
+        font_size: "16px"
+        color: "#666666"
+        line_height: 1.75
+        margin_bottom: "16px"
+        
+      step_tasks:
+        list_style: "none"
+        padding: "0"
+        margin: "0"
+        
+      task_item:
+        font_size: "14px"
+        color: "#666666"
+        padding: "8px 0"
+        padding_left: "24px"
+        position: "relative"
+        
+        before:
+          content: "'→'"
+          position: "absolute"
+          left: "0"
+          color: "#4ECDC4"
+
+  # ==========================================
+  # ACHIEVEMENT
+  # ==========================================
+  - id: "achievement"
+    name: "制作実績"
+    type: "case_highlight"
+    
+    content:
+      heading:
+        title: "Achievement"
+        subtitle: "制作実績"
+        
+      case:
+        client: "MuuMuu Aloha"
+        category: "アパレルEC"
+        image: "case_muumuu.jpg"
+        description: "アロハシャツ専門のECサイト。Shopifyで構築し、Instagram連携で売上が2.5倍に向上。"
+        results:
+          - metric: "売上"
+            value: "2.5倍"
+          - metric: "顧客単価"
+            value: "+40%"
+          - metric: "リピート率"
+            value: "65%"
+        link: "/cases/muumuu-aloha"
+
+  # ==========================================
+  # FAQ
+  # ==========================================
+  - id: "faq"
+    name: "よくある質問"
+    type: "accordion_faq"
+    
+    content:
+      heading:
+        title: "FAQ"
+        
+      questions:
+        - q: "料金はいくらですか？"
+          a: "月額49,800円×8ヶ月契約で、総額498,000円です。商品数が100点を超える場合は別途お見積もりとなります。"
+          
+        - q: "なぜShopifyがおすすめですか？"
+          a: "世界No.1のECプラットフォームで、SNS連携やSEO対策が標準装備されています。拡張性が高く、将来的な事業拡大にも対応できます。"
+          
+        - q: "既存のECサイトから移行できますか？"
+          a: "はい、BASEやSTORES、カラーミーショップからの移行も可能です。商品データ移行もサポートします。"
+          
+        - q: "SEO対策は含まれますか？"
+          a: "基本的なSEO設定は含まれます。本格的なSEO対策（コンテンツマーケティング等）は別途ご相談ください。"
+          
+        - q: "SNS連携は可能ですか？"
+          a: "Instagram・Facebook・TikTokとの連携が可能です。SNSから直接商品を販売できるように設定します。"
+          
+        - q: "商品登録は自分でできますか？"
+          a: "はい、管理画面から簡単に登録できます。初回は100商品まで代行し、その後は運用マニュアルを見ながらご自身で追加できます。"
+          
+        - q: "決済手数料はいくらですか？"
+          a: "Shopify ペイメントを使用する場合、3.25%〜3.4%です。外部決済サービスを使用する場合は別途手数料がかかります。"
+          
+        - q: "月額費用以外にかかる費用はありますか？"
+          a: "Shopifyの月額プラン料金（$29〜）と決済手数料が別途かかります。アプリを追加する場合も追加費用が発生します。"

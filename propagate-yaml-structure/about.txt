@@ -1,0 +1,43 @@
+各ページの構成概要
+1. トップページ (page-home.yaml + page-home-sections.yaml)
+ヒーローセクション
+ミッションセクション
+サービス一覧
+独自の強み（3ポイント）
+パートナー企業ロゴ
+導入事例
+お問い合わせCTA
+2. WEB制作ページ (page-web-design.yaml)
+サービス詳細
+制作プラン（3種類）
+制作フロー
+実績紹介
+FAQ
+3. Shopify ECページ (page-shopify.yaml)
+Shopifyの特徴
+構築プラン
+EC成功事例
+サポート内容
+4. 広告運用ページ (page-ad.yaml)
+サブスクリプションプラン
+運用実績
+対応媒体（Google/Yahoo/SNS）
+料金プラン
+5. TikTok CMページ (page-spark-buzz.yaml)
+SPARK BUZZサービス紹介
+TikTok動画制作実績
+制作プロセス
+料金プラン
+6. 会社情報ページ (page-company.yaml) ✨NEW
+会社概要（テーブル形式）
+代表メッセージ（画像+テキスト）
+企業理念（Mission/Vision/Value）
+沿革（タイムライン形式）
+アクセスマップ
+お問い合わせCTA
+7. お問い合わせページ (page-contact.yaml) ✨NEW
+お問い合わせ方法選択（LINE/フォーム）
+詳細フォーム（会社名/氏名/メール/電話/相談内容/予算/メッセージ）
+フォームバリデーション仕様
+よくある質問（アコーディオン形式）
+電話お問い合わせ情報

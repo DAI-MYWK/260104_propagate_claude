@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="月額9,800円〜のホームページ制作・マーケティングサービス。WEB制作、EC構築、広告運用、TikTok CMまで一貫サポート。"
+    />
+    <meta
+      name="keywords"
+      content="ホームページ制作,Web制作,月額9800円,EC構築,広告運用,TikTok,マーケティング"
+    />
+    <title>挑戦者の価値を届ける | Propagate Inc.</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/home.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" role="banner">
+      <div class="header__container">
+        <a class="header__logo" href="index.html"> Propagate </a>
+
+        <nav
+          class="header__nav"
+          role="navigation"
+          aria-label="メインナビゲーション"
+        >
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="index.html">TOP</a>
+            </li>
+            <li class="header__menu-item header__menu-item--dropdown">
+              <a class="header__menu-link" href="#service-overview"
+                >サービス一覧</a
+              >
+              <div class="header__dropdown">
+                <a class="header__dropdown-item" href="web-design.html"
+                  >WEB制作</a
+                >
+                <a class="header__dropdown-item" href="shopify-design.html"
+                  >Shopify EC制作</a
+                >
+                <a class="header__dropdown-item" href="subscription-ad.html"
+                  >広告運用</a
+                >
+                <a class="header__dropdown-item" href="spark-buzz.html"
+                  >TikTok CM</a
+                >
+                <a
+                  class="header__dropdown-item"
+                  href="https://www.smart-seo.jp/"
+                  target="_blank"
+                  rel="noopener"
+                  >SEO対策</a
+                >
+                <a
+                  class="header__dropdown-item"
+                  href="https://www.saiyo-dx.jp/"
+                  target="_blank"
+                  rel="noopener"
+                  >採用DX</a
+                >
+                <a class="header__dropdown-item" href="#instagram-dm"
+                  >Instagram DM営業</a
+                >
+              </div>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#cases">実績</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="company.html">会社情報</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#recruit">採用情報</a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link header__menu-link--cta"
+                href="question.html"
+                >お問い合わせ・資料請求</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero" data-animate>
+        <div class="hero__container">
+          <!-- Left Side: Content -->
+          <div class="hero__content">
+            <h1 class="hero__heading">
+              <span class="hero__heading-main">挑戦者の価値を届ける</span>
+              <span class="hero__heading-sub">WebDesign&Marketing</span>
+            </h1>
+            <div class="hero__cta">
+              <a
+                href="question.html"
+                class="btn btn--secondary btn--large hero__cta-button"
+              >
+                <span class="btn__text">プロパゲートの資料をダウンロード</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Side: Form -->
+          <div class="hero__form-wrapper">
+            <form
+              class="hero__form"
+              id="hero-form"
+              action="/api/contact"
+              method="POST"
+            >
+              <div class="hero__form-header">
+                <p class="hero__form-badge">3分で概要が事前にわかる</p>
+                <h2 class="hero__form-title">無料で資料ダウンロード</h2>
+              </div>
+
+              <div class="hero__form-body">
+                <!-- Company Name -->
+                <div class="form-group">
+                  <label class="form-label" for="company-name"> 会社名 </label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="company-name"
+                    name="company_name"
+                    placeholder="例）株式会社プロパゲート"
+                  />
+                </div>
+
+                <!-- Name -->
+                <div class="form-group">
+                  <label class="form-label" for="name">
+                    お名前
+                    <span class="form-label__required">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="例）山田 太郎"
+                    required
+                    aria-required="true"
+                  />
+                  <span class="form-error" role="alert"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label class="form-label" for="email">
+                    メールアドレス
+                    <span class="form-label__required">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="例）example@example.com"
+                    required
+                    aria-required="true"
+                  />
+                  <span class="form-error" role="alert"></span>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label class="form-label" for="phone">
+                    電話番号
+                    <span class="form-label__required">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="例）090-0000-0000"
+                    required
+                    aria-required="true"
+                  />
+                  <span class="form-error" role="alert"></span>
+                </div>
+
+                <!-- Privacy Policy -->
+                <div class="form-checkbox">
+                  <input
+                    class="form-checkbox__input"
+                    type="checkbox"
+                    id="privacy-policy"
+                    name="privacy_policy"
+                    required
+                  />
+                  <label class="form-checkbox__label" for="privacy-policy">
+                    <a href="#privacy">プライバシーポリシー</a>に同意する
+                  </label>
+                </div>
+              </div>
+
+              <div class="hero__form-footer">
+                <button
+                  class="btn btn--primary btn--large btn--full hero__form-submit"
+                  type="submit"
+                >
+                  資料をダウンロードする
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Background -->
+        <div class="hero__background">
+          <img
+            class="hero__background-image"
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80"
+            alt=""
+            loading="eager"
+          />
+          <div class="hero__background-overlay"></div>
+        </div>
+      </section>
+
+      <!-- Mission Section -->
+      <section id="mission" class="mission section" data-animate>
+        <div class="mission__container container">
+          <div class="section-heading">
+            <span class="section-heading__label">プロパゲートの使命</span>
+            <h2 class="section-heading__title">MISSION</h2>
+          </div>
+
+          <div class="mission__content">
+            <div class="mission__value-icons">
+              <div class="mission__icon-item" data-animate>
+                <div class="mission__icon-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=60&q=80"
+                    alt="Instagram"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <p class="mission__icon-label">Instagram の画像</p>
+              </div>
+
+              <div class="mission__icon-item" data-animate>
+                <div class="mission__icon-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=60&q=80"
+                    alt="X (Twitter)"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <p class="mission__icon-label">X (Twitter) の文章</p>
+              </div>
+
+              <div class="mission__icon-item" data-animate>
+                <div class="mission__icon-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=60&q=80"
+                    alt="TikTok"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <p class="mission__icon-label">TikTok のショート動画</p>
+              </div>
+
+              <div class="mission__icon-item" data-animate>
+                <div class="mission__icon-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=60&q=80"
+                    alt="広告"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <p class="mission__icon-label">広告メディアのフォーマット</p>
+              </div>
+            </div>
+
+            <div class="mission__text">
+              <p class="mission__question">
+                その枠の中であなたの価値は伝わりますか？
+              </p>
+
+              <p class="mission__statement">
+                私たちプロパゲートのミッションは<br />
+                <strong>「挑戦者の価値を届ける」</strong>
+              </p>
+
+              <p class="mission__description">
+                あなたが磨き上げた価値を言語化し<br />
+                その価値を自由に表現する場として<br />
+                ホームページを作り上げます。
+              </p>
+
+              <p class="mission__description">
+                勿論、作っただけでは終わりません。<br />
+                その後の運用まで代行する事で<br />
+                「届けたい人に価値を届ける」<br />
+                その瞬間までこだわります。
+              </p>
+
+              <p class="mission__cta-text">
+                「世界で唯一、あなただけのプラットフォーム」<br />
+                で本当の価値を届けませんか？
+              </p>
+            </div>
+
+            <div class="mission__illustration" data-animate>
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80"
+                alt="プロパゲートのミッション図解"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Overview Section -->
+      <section id="service-overview" class="service-overview section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-heading__label">提供サービス一覧</span>
+            <h2 class="section-heading__title">SERVICE</h2>
+          </div>
+
+          <div class="service-grid">
+            <!-- Service 1: WEB制作 -->
+            <article class="service-card">
+              <span class="service-card__badge">人気No.1</span>
+              <img
+                class="service-card__icon"
+                src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=64&q=80"
+                alt=""
+              />
+              <h3 class="service-card__name">Web Design</h3>
+              <p class="service-card__tagline">価値をカタチにするWeb Design</p>
+              <p class="service-card__price">月額9,800円〜</p>
+              <p class="service-card__description">
+                WEB制作は月額9,800円から。最短3ヶ月でOK。Shopifyも対応可能。
+              </p>
+              <ul class="service-card__features">
+                <li class="service-card__feature-item">月額9,800円から</li>
+                <li class="service-card__feature-item">最短3ヶ月契約</li>
+                <li class="service-card__feature-item">オリジナルデザイン</li>
+              </ul>
+              <a href="web-design.html" class="service-card__link"
+                >詳細を見る</a
+              >
+            </article>
+
+            <!-- Service 2: EC -->
+            <article class="service-card">
+              <img
+                class="service-card__icon"
+                src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=64&q=80"
+                alt=""
+              />
+              <h3 class="service-card__name">EC</h3>
+              <p class="service-card__tagline">EC売上をUPさせる</p>
+              <p class="service-card__description">
+                ShopifyでECサイトを構築。売上向上のための施策も実施。
+              </p>
+              <ul class="service-card__features">
+                <li class="service-card__feature-item">Shopify専門</li>
+                <li class="service-card__feature-item">売上向上施策</li>
+                <li class="service-card__feature-item">運用サポート</li>
+              </ul>
+              <a href="shopify-design.html" class="service-card__link"
+                >詳細を見る</a
+              >
+            </article>
+
+            <!-- Service 3: Marketing -->
+            <article class="service-card">
+              <img
+                class="service-card__icon"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=64&q=80"
+                alt=""
+              />
+              <h3 class="service-card__name">Marketing</h3>
+              <p class="service-card__tagline">価値を届けるMarketing</p>
+              <p class="service-card__description">
+                WebとAd（広告）で集客を最大化。GoogleやSNS広告でLP制作・運用。
+              </p>
+              <ul class="service-card__features">
+                <li class="service-card__feature-item">Google広告</li>
+                <li class="service-card__feature-item">SNS広告</li>
+                <li class="service-card__feature-item">LP制作</li>
+              </ul>
+              <a href="subscription-ad.html" class="service-card__link"
+                >詳細を見る</a
+              >
+            </article>
+
+            <!-- Service 4: TikTok CM -->
+            <article class="service-card">
+              <span class="service-card__badge">話題</span>
+              <img
+                class="service-card__icon"
+                src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=64&q=80"
+                alt=""
+              />
+              <h3 class="service-card__name">TikTok CM</h3>
+              <p class="service-card__tagline">SPARK BUZZ</p>
+              <p class="service-card__description">
+                TikTok × インフルエンサーでバズを作る。動画制作から配信まで。
+              </p>
+              <ul class="service-card__features">
+                <li class="service-card__feature-item">TikTok動画制作</li>
+                <li class="service-card__feature-item">インフルエンサー起用</li>
+                <li class="service-card__feature-item">バズ施策</li>
+              </ul>
+              <a href="spark-buzz.html" class="service-card__link"
+                >詳細を見る</a
+              >
+            </article>
+
+            <!-- Service 5: SEO -->
+            <article class="service-card">
+              <img
+                class="service-card__icon"
+                src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=64&q=80"
+                alt=""
+              />
+              <h3 class="service-card__name">SEO</h3>
+              <p class="service-card__tagline">月額8,000円〜のAI SEO</p>
+              <p class="service-card__price">月額14,980円</p>
+              <p class="service-card__description">
+                AI活用したSEO対策で検索順位を向上。
+              </p>
+              <ul class="service-card__features">
+                <li class="service-card__feature-item">AI分析</li>
+                <li class="service-card__feature-item">キーワード最適化</li>
+                <li class="service-card__feature-item">月次レポート</li>
+              </ul>
+              <a
+                href="https://www.smart-seo.jp/"
+                class="service-card__link"
+                target="_blank"
+                rel="noopener"
+                >詳細を見る</a
+              >
+            </article>
+
+            <!-- Service 6: DM営業システムBEEAM -->
+            <article class="service-card">
+              <img
+                class="service-card__icon"
+                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=64&q=80"
+                alt=""
+              />
+              <h3 class="service-card__name">DM営業システムBEEAM</h3>
+              <p class="service-card__description">
+                Instagram DMを使った自動営業ツール。月間400件以上のアプローチ。
+              </p>
+              <ul class="service-card__features">
+                <li class="service-card__feature-item">自動DM送信</li>
+                <li class="service-card__feature-item">月間400件</li>
+                <li class="service-card__feature-item">フォロー自動化</li>
+              </ul>
+              <a href="#instagram-dm" class="service-card__link">詳細を見る</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unique Points Section -->
+      <section id="unique-points" class="unique-points section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-heading__label">選ばれる理由</span>
+            <h2 class="section-heading__title">ONE&ONLY</h2>
+            <p class="section-heading__subtitle">プロパゲートだけの強み</p>
+          </div>
+
+          <!-- Point #1 -->
+          <div class="unique-point">
+            <div class="unique-point__content">
+              <span class="unique-point__number">POINT #1</span>
+              <h3 class="unique-point__title">1ヶ月からUP可能</h3>
+              <p class="unique-point__description">
+                最短1ヶ月単位から契約可能。<br />
+                短期プロジェクトにも柔軟に対応します。<br />
+                必要な期間だけご利用いただけます。
+              </p>
+              <div class="unique-point__stats">
+                <div class="unique-point__stat-item">
+                  <div class="unique-point__stat-value">1ヶ月</div>
+                  <div class="unique-point__stat-label">最短契約期間</div>
+                </div>
+                <div class="unique-point__stat-item">
+                  <div class="unique-point__stat-value">8ヶ月</div>
+                  <div class="unique-point__stat-label">平均継続期間</div>
+                </div>
+              </div>
+            </div>
+            <div class="unique-point__image-wrapper">
+              <img
+                class="unique-point__image"
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Point #2 -->
+          <div class="unique-point unique-point--reverse">
+            <div class="unique-point__content">
+              <span class="unique-point__number">POINT #2</span>
+              <h3 class="unique-point__title">LINEでOK</h3>
+              <p class="unique-point__description">
+                面倒な打ち合わせ不要。<br />
+                LINEで気軽に相談可能。<br />
+                最短2分でご返信します。<br />
+                24時間いつでもメッセージOK。
+              </p>
+              <div class="unique-point__stats">
+                <div class="unique-point__stat-item">
+                  <div class="unique-point__stat-value">2分</div>
+                  <div class="unique-point__stat-label">平均返信時間</div>
+                </div>
+                <div class="unique-point__stat-item">
+                  <div class="unique-point__stat-value">98%</div>
+                  <div class="unique-point__stat-label">顧客満足度</div>
+                </div>
+              </div>
+            </div>
+            <div class="unique-point__image-wrapper">
+              <img
+                class="unique-point__image"
+                src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- Point #3 -->
+          <div class="unique-point">
+            <div class="unique-point__content">
+              <span class="unique-point__number">POINT #3</span>
+              <h3 class="unique-point__title">パートナー実績4,000社超</h3>
+              <p class="unique-point__description">
+                大手企業から中小企業まで、<br />
+                幅広い業界での実績があります。<br />
+                信頼と実績に基づいた提案をします。
+              </p>
+              <div class="unique-point__stats">
+                <div class="unique-point__stat-item">
+                  <div class="unique-point__stat-value">4,000+</div>
+                  <div class="unique-point__stat-label">取引企業数</div>
+                </div>
+                <div class="unique-point__stat-item">
+                  <div class="unique-point__stat-value">92%</div>
+                  <div class="unique-point__stat-label">継続率</div>
+                </div>
+              </div>
+            </div>
+            <div class="unique-point__image-wrapper">
+              <img
+                class="unique-point__image"
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section -->
+      <section id="partners" class="partners section">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-heading__title">PARTNERS</h2>
+            <p class="section-heading__subtitle">
+              取引実績のある企業様（一部）
+            </p>
+          </div>
+
+          <div class="partners__carousel">
+            <div class="partners__track">
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=HRC"
+                  alt="HRC"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=17LIVE"
+                  alt="17LIVE"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=RGP"
+                  alt="RGP"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=Form+Eyes"
+                  alt="Form Eyes"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=RGF"
+                  alt="RGF"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=MaxValu"
+                  alt="MaxValu"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=For+The+Win"
+                  alt="For The Win"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=GoodStaff"
+                  alt="GoodStaff"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=Lixi"
+                  alt="Lixi"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=GA+technologies"
+                  alt="GA technologies"
+                />
+              </div>
+              <div class="partners__logo-item">
+                <img
+                  src="https://via.placeholder.com/180x80/f0f0f0/333333?text=365%E6%97%A5"
+                  alt="365日"
+                />
+              </div>
+            </div>
+          </div>
+
+          <p class="partners__caption">
+            パートナー企業<strong class="partners__highlight">4,000社超</strong
+            >の実績
+          </p>
+        </div>
+      </section>
+
+      <!-- Case Studies Section -->
+      <section id="cases" class="case-studies section">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-heading__title">CASES</h2>
+            <p class="section-heading__subtitle">制作実績</p>
+          </div>
+
+          <div class="case-studies__filter">
+            <button
+              class="case-studies__filter-btn case-studies__filter-btn--active"
+              data-category="all"
+            >
+              すべて
+            </button>
+            <button class="case-studies__filter-btn" data-category="web">
+              WEB制作
+            </button>
+            <button class="case-studies__filter-btn" data-category="ec">
+              EC構築
+            </button>
+            <button class="case-studies__filter-btn" data-category="ad">
+              広告運用
+            </button>
+            <button class="case-studies__filter-btn" data-category="tiktok">
+              TikTok
+            </button>
+          </div>
+
+          <div class="case-studies__grid">
+            <!-- Case Study 1: Bloom9 -->
+            <article class="case-card" data-category="web ad">
+              <a href="#case-bloom9" class="case-card__link">
+                <div class="case-card__image-wrapper">
+                  <img
+                    class="case-card__image"
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+                    alt="Bloom9 LP制作・SNS運用"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="case-card__content">
+                  <h3 class="case-card__client">Bloom9</h3>
+                  <p class="case-card__category">LP制作・SNS運用</p>
+                  <p class="case-card__description">
+                    LP制作とSNS運用を実施。CVRを3倍に改善し、CPAを大幅に削減。
+                  </p>
+                  <div class="case-card__results">
+                    <div class="case-card__result-item">
+                      <span class="case-card__result-label">CVR</span>
+                      <span class="case-card__result-value"
+                        >1.2% → 3.6%（3倍）</span
+                      >
+                    </div>
+                    <div class="case-card__result-item">
+                      <span class="case-card__result-label">CPA</span>
+                      <span class="case-card__result-value"
+                        >5,000円 → 2,000円（3,000円削減）</span
+                      >
+                    </div>
+                  </div>
+                  <p class="case-card__period">2023年4月〜</p>
+                </div>
+              </a>
+            </article>
+
+            <!-- Case Study 2: MuuMuu Aloha -->
+            <article class="case-card" data-category="ec">
+              <a href="#case-muumuu" class="case-card__link">
+                <div class="case-card__image-wrapper">
+                  <img
+                    class="case-card__image"
+                    src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&q=80"
+                    alt="MuuMuu Aloha EC構築"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="case-card__content">
+                  <h3 class="case-card__client">MuuMuu Aloha</h3>
+                  <p class="case-card__category">EC構築</p>
+                  <p class="case-card__description">
+                    Shopifyを使用したECサイト構築。売上を2.5倍、顧客単価を40%向上。
+                  </p>
+                  <div class="case-card__results">
+                    <div class="case-card__result-item">
+                      <span class="case-card__result-label">売上</span>
+                      <span class="case-card__result-value">2.5倍</span>
+                    </div>
+                    <div class="case-card__result-item">
+                      <span class="case-card__result-label">顧客単価</span>
+                      <span class="case-card__result-value">40%向上</span>
+                    </div>
+                  </div>
+                  <p class="case-card__period">2022年10月〜</p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Preview Section -->
+      <section id="about" class="about-preview section">
+        <div class="about-preview__container">
+          <div class="about-preview__content">
+            <h2 class="about-preview__title">ABOUT</h2>
+            <div class="about-preview__text">
+              <p>
+                株式会社プロパゲートは、挑戦者の価値を届けるために2020年に設立しました。
+              </p>
+              <p>
+                世界で唯一、あなただけのプラットフォームを作り、本当の価値を届けるお手伝いをします。
+              </p>
+              <p>
+                これまで4,000社以上の企業様をサポートさせていただき、多くの成功事例を生み出してきました。
+              </p>
+            </div>
+            <div class="about-preview__stats">
+              <div class="about-preview__stat-item">
+                <div class="about-preview__stat-value">2020年</div>
+                <div class="about-preview__stat-label">設立</div>
+              </div>
+              <div class="about-preview__stat-item">
+                <div class="about-preview__stat-value">4,000+</div>
+                <div class="about-preview__stat-label">取引企業数</div>
+              </div>
+              <div class="about-preview__stat-item">
+                <div class="about-preview__stat-value">92%</div>
+                <div class="about-preview__stat-label">継続率</div>
+              </div>
+            </div>
+            <a href="company.html" class="btn btn--outline about-preview__btn"
+              >会社情報を見る</a
+            >
+          </div>
+          <div class="about-preview__image-wrapper">
+            <img
+              class="about-preview__image"
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+              alt="オフィス写真"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA Section -->
+      <section id="contact-cta" class="contact-cta section">
+        <div class="container">
+          <div class="contact-cta__content">
+            <h2 class="contact-cta__title">CONTACT</h2>
+            <p class="contact-cta__subtitle">まずはお気軽にご相談ください</p>
+            <p class="contact-cta__description">
+              LINEで24時間相談受付中。お急ぎの方はお電話でもお問い合わせいただけます。
+            </p>
+            <div class="contact-cta__buttons">
+              <a
+                href="https://line.me/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--primary btn--large"
+              >
+                LINEで相談する
+              </a>
+              <a href="question.html" class="btn btn--outline btn--large">
+                資料をダウンロード
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer__section">
+            <h3 class="footer__section-title">サービス</h3>
+            <ul class="footer__links">
+              <li class="footer__link">
+                <a href="web-design.html">WEB制作</a>
+              </li>
+              <li class="footer__link">
+                <a href="shopify-design.html">Shopify EC</a>
+              </li>
+              <li class="footer__link">
+                <a href="subscription-ad.html">広告運用</a>
+              </li>
+              <li class="footer__link">
+                <a href="spark-buzz.html">TikTok CM</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <h3 class="footer__section-title">会社情報</h3>
+            <ul class="footer__links">
+              <li class="footer__link">
+                <a href="company.html#philosophy">企業理念</a>
+              </li>
+              <li class="footer__link"><a href="company.html">会社概要</a></li>
+              <li class="footer__link">
+                <a href="company.html#message">代表メッセージ</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <h3 class="footer__section-title">お問い合わせ</h3>
+            <ul class="footer__links">
+              <li class="footer__link">
+                <a href="question.html">資料ダウンロード</a>
+              </li>
+              <li class="footer__link">
+                <a href="https://line.me/" target="_blank" rel="noopener"
+                  >LINE相談</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <h3 class="footer__section-title">SNS</h3>
+            <ul class="footer__links">
+              <li class="footer__link">
+                <a
+                  href="https://facebook.com/propagate"
+                  target="_blank"
+                  rel="noopener"
+                  >Facebook</a
+                >
+              </li>
+              <li class="footer__link">
+                <a
+                  href="https://twitter.com/propagate_inc"
+                  target="_blank"
+                  rel="noopener"
+                  >Twitter</a
+                >
+              </li>
+              <li class="footer__link">
+                <a
+                  href="https://instagram.com/propagate_inc"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © 2020 Propagate Inc. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,539 @@
+# ============================================
+# SHARED COMPONENTS
+# 全ページで使用される共通コンポーネント定義
+# ============================================
+
+# ============================================
+# BUTTONS
+# ============================================
+
+buttons:
+  # Primary Button
+  primary:
+    html_structure: |
+      <button class="btn btn--primary" type="button">
+        <span class="btn__text">ボタンテキスト</span>
+      </button>
+    
+    css:
+      display: "inline-flex"
+      align_items: "center"
+      justify_content: "center"
+      padding: "16px 32px"
+      background: "#FF6B6B"
+      color: "#FFFFFF"
+      font_size: "16px"
+      font_weight: 600
+      font_family: "'Noto Sans JP', sans-serif"
+      border: "none"
+      border_radius: "50px"
+      cursor: "pointer"
+      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+      text_decoration: "none"
+      white_space: "nowrap"
+      
+      hover:
+        background: "#E55555"
+        transform: "translateY(-2px)"
+        box_shadow: "0 8px 20px rgba(255, 107, 107, 0.3)"
+        
+      active:
+        transform: "translateY(0)"
+        box_shadow: "0 4px 12px rgba(255, 107, 107, 0.2)"
+        
+      focus:
+        outline: "none"
+        box_shadow: "0 0 0 3px rgba(255, 107, 107, 0.3)"
+        
+      disabled:
+        background: "#CCCCCC"
+        color: "#999999"
+        cursor: "not-allowed"
+        transform: "none"
+        
+  # Secondary Button
+  secondary:
+    html_structure: |
+      <button class="btn btn--secondary" type="button">
+        <span class="btn__text">ボタンテキスト</span>
+      </button>
+    
+    css:
+      display: "inline-flex"
+      align_items: "center"
+      justify_content: "center"
+      padding: "16px 32px"
+      background: "#4ECDC4"
+      color: "#FFFFFF"
+      font_size: "16px"
+      font_weight: 600
+      border: "none"
+      border_radius: "50px"
+      cursor: "pointer"
+      transition: "all 0.3s ease"
+      
+      hover:
+        background: "#3AB5AC"
+        
+  # Outline Button
+  outline:
+    html_structure: |
+      <button class="btn btn--outline" type="button">
+        <span class="btn__text">ボタンテキスト</span>
+      </button>
+    
+    css:
+      display: "inline-flex"
+      align_items: "center"
+      justify_content: "center"
+      padding: "14px 30px"
+      background: "transparent"
+      color: "#4ECDC4"
+      font_size: "16px"
+      font_weight: 600
+      border: "2px solid #4ECDC4"
+      border_radius: "50px"
+      cursor: "pointer"
+      transition: "all 0.3s ease"
+      
+      hover:
+        background: "#4ECDC4"
+        color: "#FFFFFF"
+        
+  # Large Button
+  large:
+    css:
+      padding: "20px 48px"
+      font_size: "18px"
+      
+  # Icon Button
+  icon:
+    html_structure: |
+      <button class="btn btn--icon" type="button">
+        <svg class="btn__icon" width="20" height="20">
+          <use href="#icon-name"></use>
+        </svg>
+        <span class="btn__text">ボタンテキスト</span>
+      </button>
+    
+    css:
+      gap: "8px"
+      
+      icon:
+        width: "20px"
+        height: "20px"
+        fill: "currentColor"
+
+# ============================================
+# CARDS
+# ============================================
+
+cards:
+  # Default Card
+  default:
+    html_structure: |
+      <article class="card">
+        <div class="card__image-wrapper">
+          <img class="card__image" src="..." alt="..." loading="lazy">
+        </div>
+        <div class="card__content">
+          <h3 class="card__title">カードタイトル</h3>
+          <p class="card__description">カードの説明文...</p>
+          <a href="#" class="card__link">詳細を見る</a>
+        </div>
+      </article>
+    
+    css:
+      display: "flex"
+      flex_direction: "column"
+      background: "#FFFFFF"
+      border_radius: "16px"
+      overflow: "hidden"
+      box_shadow: "0 4px 8px rgba(0, 0, 0, 0.08)"
+      transition: "all 0.3s ease"
+      
+      hover:
+        transform: "translateY(-4px)"
+        box_shadow: "0 12px 24px rgba(0, 0, 0, 0.12)"
+        
+      image_wrapper:
+        position: "relative"
+        width: "100%"
+        padding_top: "60%"
+        overflow: "hidden"
+        
+      image:
+        position: "absolute"
+        top: "0"
+        left: "0"
+        width: "100%"
+        height: "100%"
+        object_fit: "cover"
+        transition: "transform 0.5s ease"
+        
+        hover:
+          transform: "scale(1.05)"
+          
+      content:
+        padding: "32px"
+        
+      title:
+        font_size: "24px"
+        font_weight: 700
+        color: "#333333"
+        margin: "0 0 16px"
+        line_height: 1.3
+        
+      description:
+        font_size: "16px"
+        color: "#666666"
+        line_height: 1.75
+        margin: "0 0 24px"
+        
+      link:
+        display: "inline-flex"
+        align_items: "center"
+        color: "#4ECDC4"
+        font_size: "16px"
+        font_weight: 600
+        text_decoration: "none"
+        transition: "color 0.2s ease"
+        
+        hover:
+          color: "#3AB5AC"
+          
+  # Service Card
+  service:
+    html_structure: |
+      <article class="card card--service">
+        <div class="card__icon-wrapper">
+          <img class="card__icon" src="..." alt="...">
+        </div>
+        <h3 class="card__title">サービス名</h3>
+        <p class="card__price">月額9,800円〜</p>
+        <ul class="card__features">
+          <li class="card__feature-item">特徴1</li>
+          <li class="card__feature-item">特徴2</li>
+        </ul>
+        <a href="#" class="card__cta btn btn--primary">詳細を見る</a>
+      </article>
+    
+    css:
+      padding: "40px"
+      text_align: "center"
+      
+      icon_wrapper:
+        width: "80px"
+        height: "80px"
+        margin: "0 auto 24px"
+        
+      icon:
+        width: "100%"
+        height: "100%"
+        object_fit: "contain"
+
+# ============================================
+# FORMS
+# ============================================
+
+forms:
+  # Input Field
+  input:
+    html_structure: |
+      <div class="form-group">
+        <label class="form-label" for="input-id">
+          ラベル
+          <span class="form-label__required">*</span>
+        </label>
+        <input 
+          class="form-input" 
+          type="text" 
+          id="input-id" 
+          name="input-name"
+          placeholder="プレースホルダー"
+          required
+          aria-required="true"
+          aria-describedby="input-error"
+        >
+        <span class="form-error" id="input-error" role="alert"></span>
+      </div>
+    
+    css:
+      form_group:
+        margin_bottom: "24px"
+        
+      form_label:
+        display: "block"
+        font_size: "14px"
+        font_weight: 600
+        color: "#333333"
+        margin_bottom: "8px"
+        
+      label_required:
+        color: "#FF6B6B"
+        margin_left: "4px"
+        
+      form_input:
+        width: "100%"
+        padding: "14px 16px"
+        font_size: "16px"
+        color: "#333333"
+        background: "#FFFFFF"
+        border: "1px solid #E5E5E5"
+        border_radius: "8px"
+        transition: "border-color 0.2s ease, box-shadow 0.2s ease"
+        
+        focus:
+          border_color: "#4ECDC4"
+          outline: "none"
+          box_shadow: "0 0 0 3px rgba(78, 205, 196, 0.1)"
+          
+        error:
+          border_color: "#FF6B6B"
+          
+        placeholder:
+          color: "#999999"
+          
+      form_error:
+        display: "block"
+        font_size: "14px"
+        color: "#FF6B6B"
+        margin_top: "8px"
+        
+  # Textarea
+  textarea:
+    html_structure: |
+      <div class="form-group">
+        <label class="form-label" for="textarea-id">ラベル</label>
+        <textarea 
+          class="form-textarea" 
+          id="textarea-id" 
+          name="textarea-name"
+          rows="5"
+          placeholder="プレースホルダー"
+        ></textarea>
+      </div>
+    
+    css:
+      form_textarea:
+        width: "100%"
+        padding: "14px 16px"
+        font_size: "16px"
+        color: "#333333"
+        background: "#FFFFFF"
+        border: "1px solid #E5E5E5"
+        border_radius: "8px"
+        resize: "vertical"
+        min_height: "120px"
+        font_family: "'Noto Sans JP', sans-serif"
+        
+  # Checkbox
+  checkbox:
+    html_structure: |
+      <div class="form-checkbox">
+        <input 
+          class="form-checkbox__input" 
+          type="checkbox" 
+          id="checkbox-id" 
+          name="checkbox-name"
+        >
+        <label class="form-checkbox__label" for="checkbox-id">
+          チェックボックスラベル
+        </label>
+      </div>
+    
+    css:
+      form_checkbox:
+        display: "flex"
+        align_items: "flex-start"
+        gap: "12px"
+        
+      checkbox_input:
+        width: "20px"
+        height: "20px"
+        accent_color: "#4ECDC4"
+        cursor: "pointer"
+        
+      checkbox_label:
+        font_size: "14px"
+        color: "#666666"
+        line_height: 1.6
+        cursor: "pointer"
+
+# ============================================
+# HEADINGS
+# ============================================
+
+headings:
+  # Section Heading
+  section:
+    html_structure: |
+      <div class="section-heading">
+        <span class="section-heading__label">ラベル</span>
+        <h2 class="section-heading__title">セクションタイトル</h2>
+        <p class="section-heading__subtitle">サブタイトル</p>
+      </div>
+    
+    css:
+      section_heading:
+        text_align: "center"
+        margin_bottom: "64px"
+        
+      label:
+        display: "block"
+        font_size: "14px"
+        font_weight: 600
+        color: "#4ECDC4"
+        text_transform: "uppercase"
+        letter_spacing: "0.1em"
+        margin_bottom: "16px"
+        
+      title:
+        font_size: "48px"
+        font_weight: 700
+        color: "#333333"
+        line_height: 1.2
+        margin: "0 0 16px"
+        font_family: "'Montserrat', 'Noto Sans JP', sans-serif"
+        
+      subtitle:
+        font_size: "18px"
+        color: "#666666"
+        line_height: 1.6
+        margin: "0"
+
+# ============================================
+# NAVIGATION
+# ============================================
+
+navigation:
+  # Header
+  header:
+    html_structure: |
+      <header class="header" role="banner">
+        <div class="header__container">
+          <a class="header__logo" href="/">
+            <img src="/assets/images/logo.svg" alt="Propagate" width="180" height="40">
+          </a>
+          
+          <nav class="header__nav" role="navigation" aria-label="メインナビゲーション">
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/">TOP</a>
+              </li>
+              <!-- More items -->
+            </ul>
+          </nav>
+          
+          <button class="header__mobile-toggle" aria-label="メニューを開く">
+            <span class="header__mobile-toggle-line"></span>
+            <span class="header__mobile-toggle-line"></span>
+            <span class="header__mobile-toggle-line"></span>
+          </button>
+        </div>
+      </header>
+    
+    css:
+      header:
+        position: "fixed"
+        top: "0"
+        left: "0"
+        width: "100%"
+        height: "80px"
+        background: "#FFFFFF"
+        box_shadow: "0 2px 8px rgba(0, 0, 0, 0.05)"
+        z_index: 1030
+        transition: "transform 0.3s ease"
+        
+      container:
+        max_width: "1200px"
+        height: "100%"
+        margin: "0 auto"
+        padding: "0 40px"
+        display: "flex"
+        align_items: "center"
+        justify_content: "space-between"
+        
+      logo:
+        display: "flex"
+        align_items: "center"
+        
+      nav:
+        display: "flex"
+        
+      menu:
+        display: "flex"
+        gap: "32px"
+        list_style: "none"
+        margin: "0"
+        padding: "0"
+        
+      menu_link:
+        font_size: "16px"
+        font_weight: 500
+        color: "#333333"
+        text_decoration: "none"
+        transition: "color 0.2s ease"
+        
+        hover:
+          color: "#4ECDC4"
+
+# ============================================
+# ANIMATIONS
+# ============================================
+
+animations:
+  # Fade In
+  fade_in:
+    keyframes: |
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    css:
+      animation_name: "fadeIn"
+      animation_duration: "0.6s"
+      animation_timing_function: "ease-out"
+      animation_fill_mode: "both"
+      
+  # Fade In Up
+  fade_in_up:
+    keyframes: |
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    css:
+      animation_name: "fadeInUp"
+      animation_duration: "0.8s"
+      animation_timing_function: "cubic-bezier(0.4, 0, 0.2, 1)"
+      animation_fill_mode: "both"
+      
+  # Scale In
+  scale_in:
+    keyframes: |
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    css:
+      animation_name: "scaleIn"
+      animation_duration: "0.5s"
+      animation_timing_function: "ease-out"
+      animation_fill_mode: "both"

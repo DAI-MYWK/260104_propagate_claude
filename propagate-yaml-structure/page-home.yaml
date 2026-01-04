@@ -1,0 +1,675 @@
+# ============================================
+# HOME PAGE - COMPLETE SPECIFICATION
+# トップページ完全仕様書
+# ============================================
+
+page:
+  id: "home"
+  path: "/"
+  
+  meta:
+    title: "挑戦者の価値を届ける | Propagate Inc."
+    description: "月額9,800円〜のホームページ制作・マーケティングサービス。WEB制作、EC構築、広告運用、TikTok CMまで一貫サポート。"
+    keywords: "ホームページ制作,Web制作,月額9800円,EC構築,広告運用,TikTok,マーケティング"
+    og_image: "/assets/images/og_home.jpg"
+    og_type: "website"
+
+# ============================================
+# SECTIONS
+# ============================================
+
+sections:
+  # ==========================================
+  # HERO SECTION
+  # ==========================================
+  - id: "hero"
+    name: "ヒーローセクション"
+    type: "hero_split"
+    
+    # HTML Structure
+    html_structure: |
+      <section id="hero" class="hero" data-animate>
+        <div class="hero__container">
+          <!-- Left Side: Content -->
+          <div class="hero__content">
+            <h1 class="hero__heading">
+              <span class="hero__heading-main">挑戦者の価値を届ける</span>
+              <span class="hero__heading-sub">WebDesign&Marketing</span>
+            </h1>
+            <div class="hero__cta">
+              <a href="/question" class="btn btn--large btn--secondary hero__cta-button">
+                <svg class="btn__icon" width="20" height="20">
+                  <use href="#icon-download"></use>
+                </svg>
+                <span class="btn__text">プロパゲートの資料をダウンロード</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Right Side: Form -->
+          <div class="hero__form-wrapper">
+            <form class="hero__form" id="hero-form" action="/api/contact" method="POST">
+              <div class="hero__form-header">
+                <p class="hero__form-badge">3分で概要が事前にわかる</p>
+                <h2 class="hero__form-title">無料で資料ダウンロード</h2>
+              </div>
+              
+              <div class="hero__form-body">
+                <!-- Company Name -->
+                <div class="form-group">
+                  <label class="form-label" for="company-name">
+                    会社名
+                  </label>
+                  <input 
+                    class="form-input" 
+                    type="text" 
+                    id="company-name" 
+                    name="company_name"
+                    placeholder="例）株式会社プロパゲート"
+                  >
+                </div>
+                
+                <!-- Name -->
+                <div class="form-group">
+                  <label class="form-label" for="name">
+                    お名前
+                    <span class="form-label__required">*</span>
+                  </label>
+                  <input 
+                    class="form-input" 
+                    type="text" 
+                    id="name" 
+                    name="name"
+                    placeholder="例）山田 太郎"
+                    required
+                    aria-required="true"
+                  >
+                  <span class="form-error" role="alert"></span>
+                </div>
+                
+                <!-- Email -->
+                <div class="form-group">
+                  <label class="form-label" for="email">
+                    メールアドレス
+                    <span class="form-label__required">*</span>
+                  </label>
+                  <input 
+                    class="form-input" 
+                    type="email" 
+                    id="email" 
+                    name="email"
+                    placeholder="例）example@example.com"
+                    required
+                    aria-required="true"
+                  >
+                  <span class="form-error" role="alert"></span>
+                </div>
+                
+                <!-- Phone -->
+                <div class="form-group">
+                  <label class="form-label" for="phone">
+                    電話番号
+                    <span class="form-label__required">*</span>
+                  </label>
+                  <input 
+                    class="form-input" 
+                    type="tel" 
+                    id="phone" 
+                    name="phone"
+                    placeholder="例）090-0000-0000"
+                    required
+                    aria-required="true"
+                  >
+                  <span class="form-error" role="alert"></span>
+                </div>
+                
+                <!-- Privacy Policy -->
+                <div class="form-checkbox">
+                  <input 
+                    class="form-checkbox__input" 
+                    type="checkbox" 
+                    id="privacy-policy" 
+                    name="privacy_policy"
+                    required
+                  >
+                  <label class="form-checkbox__label" for="privacy-policy">
+                    <a href="/privacy" target="_blank">プライバシーポリシー</a>に同意する
+                  </label>
+                </div>
+              </div>
+              
+              <div class="hero__form-footer">
+                <button class="btn btn--primary btn--large hero__form-submit" type="submit">
+                  資料をダウンロードする
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Background -->
+        <div class="hero__background">
+          <picture>
+            <source 
+              srcset="/assets/images/hero_background.webp" 
+              type="image/webp"
+            >
+            <img 
+              class="hero__background-image" 
+              src="/assets/images/hero_background.jpg" 
+              alt=""
+              loading="eager"
+            >
+          </picture>
+          <div class="hero__background-overlay"></div>
+        </div>
+      </section>
+    
+    # CSS Specification
+    css:
+      # Section
+      hero:
+        position: "relative"
+        min_height: "100vh"
+        display: "flex"
+        align_items: "center"
+        overflow: "hidden"
+        
+        # Background
+        background_color: "#4ECDC4"
+        
+      hero__container:
+        position: "relative"
+        z_index: 10
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "120px 40px 80px"
+        display: "grid"
+        grid_template_columns: "1fr 480px"
+        gap: "80px"
+        align_items: "center"
+        
+        # Mobile
+        mobile:
+          grid_template_columns: "1fr"
+          gap: "60px"
+          padding: "80px 20px 60px"
+          
+      # Background Image
+      hero__background:
+        position: "absolute"
+        top: "0"
+        left: "0"
+        width: "100%"
+        height: "100%"
+        z_index: 1
+        
+      hero__background_image:
+        width: "100%"
+        height: "100%"
+        object_fit: "cover"
+        
+      hero__background_overlay:
+        position: "absolute"
+        top: "0"
+        left: "0"
+        width: "100%"
+        height: "100%"
+        background: "linear-gradient(135deg, rgba(78, 205, 196, 0.85), rgba(78, 205, 196, 0.7))"
+        
+      # Content (Left Side)
+      hero__content:
+        display: "flex"
+        flex_direction: "column"
+        gap: "40px"
+        
+      hero__heading:
+        display: "flex"
+        flex_direction: "column"
+        gap: "16px"
+        
+      hero__heading_main:
+        font_size: "64px"
+        font_weight: 700
+        color: "#FFFFFF"
+        line_height: 1.2
+        letter_spacing: "0.02em"
+        font_family: "'Montserrat', 'Noto Sans JP', sans-serif"
+        animation: "fadeInUp 1s ease-out 0.2s both"
+        
+        # Mobile
+        mobile:
+          font_size: "40px"
+          
+      hero__heading_sub:
+        font_size: "32px"
+        font_weight: 500
+        color: "#FFFFFF"
+        line_height: 1.3
+        font_family: "'Montserrat', 'Noto Sans JP', sans-serif"
+        animation: "fadeInUp 1s ease-out 0.4s both"
+        
+        # Mobile
+        mobile:
+          font_size: "24px"
+          
+      hero__cta:
+        animation: "fadeInUp 1s ease-out 0.6s both"
+        
+      hero__cta_button:
+        box_shadow: "0 8px 20px rgba(0, 0, 0, 0.2)"
+        
+      # Form (Right Side)
+      hero__form_wrapper:
+        animation: "fadeInUp 1s ease-out 0.8s both"
+        
+      hero__form:
+        background: "#FFFFFF"
+        border_radius: "16px"
+        padding: "40px"
+        box_shadow: "0 20px 60px rgba(0, 0, 0, 0.15)"
+        
+      hero__form_header:
+        margin_bottom: "32px"
+        text_align: "center"
+        
+      hero__form_badge:
+        display: "inline-block"
+        padding: "8px 16px"
+        background: "#FFD93D"
+        color: "#333333"
+        font_size: "14px"
+        font_weight: 600
+        border_radius: "20px"
+        margin_bottom: "16px"
+        
+      hero__form_title:
+        font_size: "24px"
+        font_weight: 700
+        color: "#333333"
+        margin: "0"
+        
+      hero__form_body:
+        display: "flex"
+        flex_direction: "column"
+        gap: "20px"
+        margin_bottom: "32px"
+        
+      hero__form_submit:
+        width: "100%"
+    
+    # JavaScript Functionality
+    javascript:
+      initialization: |
+        // Hero Form Validation
+        const heroForm = document.getElementById('hero-form');
+        
+        if (heroForm) {
+          heroForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Validate form
+            const isValid = validateForm(heroForm);
+            if (!isValid) return;
+            
+            // Get form data
+            const formData = new FormData(heroForm);
+            
+            // Submit
+            try {
+              const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: formData
+              });
+              
+              if (response.ok) {
+                // Success
+                window.location.href = '/thank-you';
+              } else {
+                // Error
+                alert('送信に失敗しました。もう一度お試しください。');
+              }
+            } catch (error) {
+              console.error('Error:', error);
+              alert('送信に失敗しました。');
+            }
+          });
+        }
+        
+        // Form Validation
+        function validateForm(form) {
+          let isValid = true;
+          const inputs = form.querySelectorAll('[required]');
+          
+          inputs.forEach(input => {
+            const errorSpan = input.nextElementSibling;
+            
+            if (!input.value.trim()) {
+              input.classList.add('error');
+              if (errorSpan && errorSpan.classList.contains('form-error')) {
+                errorSpan.textContent = 'この項目は必須です';
+              }
+              isValid = false;
+            } else {
+              input.classList.remove('error');
+              if (errorSpan && errorSpan.classList.contains('form-error')) {
+                errorSpan.textContent = '';
+              }
+            }
+            
+            // Email validation
+            if (input.type === 'email' && input.value) {
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(input.value)) {
+                input.classList.add('error');
+                if (errorSpan) {
+                  errorSpan.textContent = '正しいメールアドレスを入力してください';
+                }
+                isValid = false;
+              }
+            }
+          });
+          
+          return isValid;
+        }
+    
+    # Animation Details
+    animations:
+      - type: "fade_in_up"
+        target: ".hero__heading-main"
+        delay: "0.2s"
+        duration: "1s"
+        
+      - type: "fade_in_up"
+        target: ".hero__heading-sub"
+        delay: "0.4s"
+        duration: "1s"
+        
+      - type: "fade_in_up"
+        target: ".hero__cta"
+        delay: "0.6s"
+        duration: "1s"
+        
+      - type: "fade_in_up"
+        target: ".hero__form-wrapper"
+        delay: "0.8s"
+        duration: "1s"
+    
+    # Responsive Breakpoints
+    responsive:
+      desktop: # >= 1024px
+        container_grid: "1fr 480px"
+        heading_main_size: "64px"
+        heading_sub_size: "32px"
+        
+      tablet: # >= 768px && < 1024px
+        container_grid: "1fr"
+        heading_main_size: "48px"
+        heading_sub_size: "28px"
+        form_max_width: "600px"
+        form_margin: "0 auto"
+        
+      mobile: # < 768px
+        container_grid: "1fr"
+        heading_main_size: "40px"
+        heading_sub_size: "24px"
+        container_padding: "80px 20px 60px"
+        gap: "40px"
+    
+    # Assets Required
+    assets:
+      images:
+        - path: "/assets/images/hero_background.jpg"
+          alt: ""
+          width: 1920
+          height: 1080
+          formats: ["webp", "jpg"]
+          
+      icons:
+        - id: "icon-download"
+          path: "/assets/icons/download.svg"
+
+  # ==========================================
+  # MISSION SECTION  
+  # ==========================================
+  - id: "mission"
+    name: "ミッションセクション"
+    type: "text_content_centered"
+    
+    html_structure: |
+      <section id="mission" class="mission section" data-animate>
+        <div class="mission__container container">
+          <div class="section-heading">
+            <span class="section-heading__label">プロパゲートの使命</span>
+            <h2 class="section-heading__title">MISSION</h2>
+          </div>
+          
+          <div class="mission__content">
+            <div class="mission__value-icons">
+              <div class="mission__icon-item" data-animate>
+                <div class="mission__icon-wrapper">
+                  <img src="/assets/icons/instagram.svg" alt="Instagram" width="60" height="60">
+                </div>
+                <p class="mission__icon-label">Instagram の画像</p>
+              </div>
+              
+              <div class="mission__icon-item" data-animate>
+                <div class="mission__icon-wrapper">
+                  <img src="/assets/icons/twitter.svg" alt="X (Twitter)" width="60" height="60">
+                </div>
+                <p class="mission__icon-label">X (Twitter) の文章</p>
+              </div>
+              
+              <div class="mission__icon-item" data-animate>
+                <div class="mission__icon-wrapper">
+                  <img src="/assets/icons/tiktok.svg" alt="TikTok" width="60" height="60">
+                </div>
+                <p class="mission__icon-label">TikTok のショート動画</p>
+              </div>
+              
+              <div class="mission__icon-item" data-animate>
+                <div class="mission__icon-wrapper">
+                  <img src="/assets/icons/ads.svg" alt="広告" width="60" height="60">
+                </div>
+                <p class="mission__icon-label">広告メディアのフォーマット</p>
+              </div>
+            </div>
+            
+            <div class="mission__text">
+              <p class="mission__question">その枠の中であなたの価値は伝わりますか？</p>
+              
+              <p class="mission__statement">
+                私たちプロパゲートのミッションは<br>
+                <strong>「挑戦者の価値を届ける」</strong>
+              </p>
+              
+              <p class="mission__description">
+                あなたが磨き上げた価値を言語化し<br>
+                その価値を自由に表現する場として<br>
+                ホームページを作り上げます。
+              </p>
+              
+              <p class="mission__description">
+                勿論、作っただけでは終わりません。<br>
+                その後の運用まで代行する事で<br>
+                「届けたい人に価値を届ける」<br>
+                その瞬間までこだわります。
+              </p>
+              
+              <p class="mission__cta-text">
+                「世界で唯一、あなただけのプラットフォーム」<br>
+                で本当の価値を届けませんか？
+              </p>
+            </div>
+            
+            <div class="mission__illustration" data-animate>
+              <img 
+                src="/assets/images/mission_illustration.svg" 
+                alt="プロパゲートのミッション図解" 
+                width="600" 
+                height="400"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    css:
+      mission:
+        padding: "120px 0"
+        background_color: "#FFFFFF"
+        
+        mobile:
+          padding: "80px 0"
+          
+      mission__container:
+        max_width: "1000px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+        mobile:
+          padding: "0 20px"
+          
+      mission__content:
+        display: "flex"
+        flex_direction: "column"
+        align_items: "center"
+        gap: "80px"
+        
+      mission__value_icons:
+        display: "grid"
+        grid_template_columns: "repeat(4, 1fr)"
+        gap: "40px"
+        width: "100%"
+        
+        tablet:
+          grid_template_columns: "repeat(2, 1fr)"
+          
+        mobile:
+          grid_template_columns: "repeat(2, 1fr)"
+          gap: "24px"
+          
+      mission__icon_item:
+        display: "flex"
+        flex_direction: "column"
+        align_items: "center"
+        gap: "16px"
+        text_align: "center"
+        
+      mission__icon_wrapper:
+        width: "100px"
+        height: "100px"
+        display: "flex"
+        align_items: "center"
+        justify_content: "center"
+        background: "linear-gradient(135deg, #F7F7F7, #FFFFFF)"
+        border_radius: "50%"
+        box_shadow: "0 4px 12px rgba(0, 0, 0, 0.08)"
+        transition: "transform 0.3s ease, box-shadow 0.3s ease"
+        
+        hover:
+          transform: "translateY(-4px)"
+          box_shadow: "0 8px 20px rgba(0, 0, 0, 0.12)"
+          
+        mobile:
+          width: "80px"
+          height: "80px"
+          
+      mission__icon_label:
+        font_size: "14px"
+        color: "#666666"
+        margin: "0"
+        
+      mission__text:
+        max_width: "800px"
+        text_align: "center"
+        display: "flex"
+        flex_direction: "column"
+        gap: "32px"
+        
+      mission__question:
+        font_size: "24px"
+        font_weight: 600
+        color: "#333333"
+        margin: "0"
+        
+        mobile:
+          font_size: "20px"
+          
+      mission__statement:
+        font_size: "28px"
+        font_weight: 700
+        color: "#4ECDC4"
+        margin: "0"
+        line_height: 1.6
+        
+        mobile:
+          font_size: "22px"
+          
+        strong:
+          color: "#FF6B6B"
+          
+      mission__description:
+        font_size: "18px"
+        color: "#666666"
+        line_height: 1.8
+        margin: "0"
+        
+        mobile:
+          font_size: "16px"
+          
+      mission__cta_text:
+        font_size: "20px"
+        font_weight: 600
+        color: "#333333"
+        margin: "0"
+        line_height: 1.8
+        
+        mobile:
+          font_size: "18px"
+          
+      mission__illustration:
+        max_width: "600px"
+        width: "100%"
+        
+        img:
+          width: "100%"
+          height: "auto"
+    
+    javascript:
+      scroll_animation: |
+        // Animate icons on scroll
+        const missionIcons = document.querySelectorAll('.mission__icon-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.style.animation = 'fadeInUp 0.6s ease-out both';
+              }, index * 100);
+            }
+          });
+        }, {
+          threshold: 0.2
+        });
+        
+        missionIcons.forEach(icon => observer.observe(icon));
+    
+    assets:
+      images:
+        - path: "/assets/images/mission_illustration.svg"
+          alt: "ミッション図解"
+          width: 600
+          height: 400
+          
+      icons:
+        - path: "/assets/icons/instagram.svg"
+        - path: "/assets/icons/twitter.svg"
+        - path: "/assets/icons/tiktok.svg"
+        - path: "/assets/icons/ads.svg"
+
+# ============================================
+# CONTINUED IN NEXT RESPONSE...
+# (SERVICE OVERVIEW, UNIQUE POINTS, PARTNERS, CASES, ABOUT, CONTACT)
+# ============================================

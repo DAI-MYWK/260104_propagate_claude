@@ -1,0 +1,498 @@
+# ============================================
+# ADVERTISING PAGE - COMPLETE SPECIFICATION  
+# 広告運用ページ完全仕様書
+# ============================================
+
+page:
+  id: "subscription_ad"
+  path: "/subscription-ad"
+  
+  meta:
+    title: "サブスク型広告運用サービス | Propagate Inc."
+    description: "Google・Yahoo・SNS広告の運用代行。月額制で安心の広告運用サポート。"
+    keywords: "広告運用,Google広告,Yahoo広告,SNS広告,Instagram,TikTok,サブスク"
+    og_image: "/assets/images/og_ad.jpg"
+
+sections:
+  # ==========================================
+  # PAGE HERO
+  # ==========================================
+  - id: "page_hero"
+    name: "ページヒーロー"
+    
+    content:
+      heading: "サブスク型<br>広告運用サービス"
+      description: "Google・Yahoo・SNS広告を一括管理。月額制で安心の運用代行。"
+      platforms_logos:
+        - "google_logo.png"
+        - "yahoo_logo.png"
+        - "instagram_logo.png"
+        - "tiktok_logo.png"
+        - "youtube_logo.png"
+        - "line_logo.png"
+        - "twitter_logo.png"
+    
+    css:
+      section:
+        background: "linear-gradient(135deg, #FF6B6B, #FFD93D)"
+
+  # ==========================================
+  # PLATFORMS
+  # ==========================================
+  - id: "platforms"
+    name: "対応プラットフォーム"
+    type: "platform_grid"
+    
+    content:
+      heading:
+        title: "対応プラットフォーム"
+        subtitle: "主要な広告媒体に対応"
+        
+      description: "Google・Yahoo・SNS（Facebook・Instagram・TikTok・LINE・X）、YouTube広告に対応しています。"
+      
+      platforms:
+        - name: "Google広告"
+          icon: "google_ads_logo.png"
+          description: "検索広告・ディスプレイ広告"
+          features:
+            - "リスティング広告"
+            - "ディスプレイ広告"
+            - "リマーケティング"
+            
+        - name: "Yahoo!広告"
+          icon: "yahoo_ads_logo.png"
+          description: "Yahoo検索・YDN"
+          features:
+            - "検索広告"
+            - "ディスプレイ広告"
+            - "ブランドパネル"
+            
+        - name: "Instagram広告"
+          icon: "instagram_ads_logo.png"
+          description: "フィード・ストーリーズ広告"
+          features:
+            - "フィード広告"
+            - "ストーリーズ広告"
+            - "リール広告"
+            
+        - name: "Facebook広告"
+          icon: "facebook_ads_logo.png"
+          description: "Meta広告プラットフォーム"
+          features:
+            - "フィード広告"
+            - "動画広告"
+            - "カルーセル広告"
+            
+        - name: "TikTok広告"
+          icon: "tiktok_ads_logo.png"
+          description: "ショート動画広告"
+          features:
+            - "インフィード広告"
+            - "トップビュー"
+            - "ブランドエフェクト"
+            
+        - name: "YouTube広告"
+          icon: "youtube_ads_logo.png"
+          description: "動画広告配信"
+          features:
+            - "インストリーム広告"
+            - "ディスカバリー広告"
+            - "バンパー広告"
+            
+        - name: "LINE広告"
+          icon: "line_ads_logo.png"
+          description: "LINEプラットフォーム"
+          features:
+            - "トークリスト広告"
+            - "LINE NEWS広告"
+            - "タイムライン広告"
+            
+        - name: "X（Twitter）広告"
+          icon: "x_ads_logo.png"
+          description: "旧Twitter広告"
+          features:
+            - "プロモツイート"
+            - "プロモトレンド"
+            - "プロモアカウント"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#F7F7F7"
+        
+      description:
+        text_align: "center"
+        font_size: "18px"
+        color: "#666666"
+        max_width: "800px"
+        margin: "0 auto 64px"
+        
+      grid:
+        display: "grid"
+        grid_template_columns: "repeat(4, 1fr)"
+        gap: "24px"
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+        tablet:
+          grid_template_columns: "repeat(2, 1fr)"
+          
+        mobile:
+          grid_template_columns: "1fr"
+          
+      platform_card:
+        background: "#FFFFFF"
+        border_radius: "12px"
+        padding: "32px"
+        text_align: "center"
+        transition: "all 0.3s ease"
+        
+        hover:
+          transform: "translateY(-4px)"
+          box_shadow: "0 8px 24px rgba(0, 0, 0, 0.1)"
+          
+      platform_icon:
+        width: "80px"
+        height: "80px"
+        margin: "0 auto 16px"
+        object_fit: "contain"
+        
+      platform_name:
+        font_size: "18px"
+        font_weight: 700
+        color: "#333333"
+        margin_bottom: "8px"
+        
+      platform_description:
+        font_size: "14px"
+        color: "#666666"
+        margin_bottom: "16px"
+        
+      platform_features:
+        list_style: "none"
+        padding: "0"
+        margin: "0"
+        display: "flex"
+        flex_direction: "column"
+        gap: "8px"
+        
+      feature_item:
+        font_size: "12px"
+        color: "#999999"
+        padding: "4px 0"
+
+  # ==========================================
+  # CLIENTS
+  # ==========================================
+  - id: "clients"
+    name: "取引実績"
+    type: "client_logos"
+    
+    content:
+      heading:
+        title: "取引実績"
+        subtitle: "広告運用実績のある企業様"
+        
+      logos:
+        - "maxvalu_logo.png"
+        - "rgf_logo.png"
+        - "goodstaff_logo.png"
+        - "formeyes_logo.png"
+        - "ftw_logo.png"
+        - "lixi_logo.png"
+        
+      description: "大手企業から中小企業まで幅広く対応"
+
+  # ==========================================
+  # LP SERVICE
+  # ==========================================
+  - id: "lp_service"
+    name: "LP制作サービス"
+    type: "addon_service"
+    
+    content:
+      heading: "LP制作も対応"
+      description: |
+        広告用ランディングページの制作も承ります。
+        CVRを最大化するデザイン・構成で、
+        広告効果を高めます。
+      features:
+        - "CVR最適化デザイン"
+        - "A/Bテスト対応"
+        - "フォーム最適化"
+        - "レスポンシブ対応"
+      price: "50,000円〜"
+      cta:
+        text: "LP制作の詳細を見る"
+        link: "/web-design#lp"
+
+  # ==========================================
+  # BENEFITS
+  # ==========================================
+  - id: "benefits"
+    name: "選ばれる理由"
+    type: "benefit_cards"
+    
+    content:
+      heading:
+        title: "選ばれる理由"
+        
+      benefits:
+        - icon: "chart_up.svg"
+          title: "CPA20%改善実績"
+          description: "データ分析に基づいた最適化で、平均CPA20%改善を実現しています。"
+          stats:
+            - label: "平均CPA改善率"
+              value: "20%"
+              
+        - icon: "support.svg"
+          title: "専任担当がサポート"
+          description: "経験豊富な専任担当が、月次レポート・改善提案を実施します。"
+          stats:
+            - label: "顧客満足度"
+              value: "95%"
+              
+        - icon: "24hours.svg"
+          title: "24時間モニタリング"
+          description: "広告の配信状況を24時間監視。異常があればすぐに対応します。"
+          stats:
+            - label: "平均対応時間"
+              value: "2時間"
+
+  # ==========================================
+  # PRICING
+  # ==========================================
+  - id: "pricing"
+    name: "料金プラン"
+    type: "pricing_tiers"
+    
+    content:
+      heading:
+        title: "料金プラン"
+        subtitle: "広告費に応じたプラン"
+        
+      note: "※ 広告費は別途お客様負担となります"
+      
+      plans:
+        - name: "スタート"
+          price: "月額50,000円"
+          ad_budget: "広告費 〜30万円/月"
+          features:
+            - "Google広告運用"
+            - "月次レポート"
+            - "メール・チャットサポート"
+          recommended: false
+          
+        - name: "スタンダード"
+          price: "月額100,000円"
+          ad_budget: "広告費 30〜100万円/月"
+          features:
+            - "Google・Yahoo広告運用"
+            - "SNS広告（2媒体まで）"
+            - "週次レポート"
+            - "電話・メール・チャットサポート"
+            - "改善提案（月1回）"
+          recommended: true
+          
+        - name: "プレミアム"
+          price: "月額200,000円〜"
+          ad_budget: "広告費 100万円〜/月"
+          features:
+            - "全媒体対応"
+            - "LP制作（月1本）"
+            - "日次レポート"
+            - "専任担当配置"
+            - "改善提案（週1回）"
+            - "A/Bテスト実施"
+          recommended: false
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#FFFFFF"
+        
+      plans_grid:
+        display: "grid"
+        grid_template_columns: "repeat(3, 1fr)"
+        gap: "32px"
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+        tablet:
+          grid_template_columns: "1fr"
+          gap: "24px"
+          
+      plan_card:
+        background: "#FFFFFF"
+        border: "2px solid #E5E5E5"
+        border_radius: "16px"
+        padding: "40px"
+        position: "relative"
+        transition: "all 0.3s ease"
+        
+        recommended:
+          border_color: "#4ECDC4"
+          border_width: "3px"
+          transform: "scale(1.05)"
+          box_shadow: "0 12px 32px rgba(78, 205, 196, 0.2)"
+          
+        hover:
+          transform: "translateY(-4px)"
+          box_shadow: "0 8px 24px rgba(0, 0, 0, 0.1)"
+          
+      recommended_badge:
+        position: "absolute"
+        top: "-16px"
+        left: "50%"
+        transform: "translateX(-50%)"
+        background: "#4ECDC4"
+        color: "#FFFFFF"
+        padding: "8px 24px"
+        border_radius: "20px"
+        font_size: "14px"
+        font_weight: 700
+        
+      plan_name:
+        font_size: "24px"
+        font_weight: 700
+        color: "#333333"
+        text_align: "center"
+        margin_bottom: "16px"
+        
+      plan_price:
+        font_size: "40px"
+        font_weight: 700
+        color: "#FF6B6B"
+        text_align: "center"
+        margin_bottom: "8px"
+        
+      plan_ad_budget:
+        font_size: "14px"
+        color: "#666666"
+        text_align: "center"
+        margin_bottom: "32px"
+        
+      plan_features:
+        list_style: "none"
+        padding: "0"
+        margin: "0 0 32px"
+        
+      feature_item:
+        padding: "12px 0"
+        font_size: "16px"
+        color: "#666666"
+        padding_left: "32px"
+        position: "relative"
+        
+        before:
+          content: "'✓'"
+          position: "absolute"
+          left: "0"
+          color: "#51CF66"
+          font_weight: 700
+
+  # ==========================================
+  # CASE STUDIES
+  # ==========================================
+  - id: "case_studies"
+    name: "運用実績"
+    type: "ad_case_grid"
+    
+    content:
+      heading:
+        title: "運用実績"
+        subtitle: "広告運用の成功事例"
+        
+      cases:
+        - client: "某美容サロン"
+          category: "Instagram広告"
+          image: "case_ad_beauty.jpg"
+          description: "Instagram広告でCPA3,500円→2,000円に改善"
+          results:
+            - metric: "CPA"
+              before: "3,500円"
+              after: "2,000円"
+              improvement: "-43%"
+            - metric: "CVR"
+              before: "1.8%"
+              after: "3.2%"
+              improvement: "+78%"
+          period: "運用期間: 6ヶ月"
+          
+        - client: "某EC事業者"
+          category: "Google広告"
+          image: "case_ad_ec.jpg"
+          description: "Google ショッピング広告でROAS 450%達成"
+          results:
+            - metric: "ROAS"
+              value: "450%"
+            - metric: "売上"
+              improvement: "+180%"
+          period: "運用期間: 8ヶ月"
+
+  # ==========================================
+  # FLOW
+  # ==========================================
+  - id: "flow"
+    name: "運用の流れ"
+    type: "process_timeline"
+    
+    content:
+      heading:
+        title: "運用の流れ"
+        
+      steps:
+        - step: "01"
+          title: "ヒアリング"
+          description: "ビジネス目標、ターゲット、予算をヒアリング"
+          
+        - step: "02"
+          title: "戦略立案"
+          description: "最適な媒体・クリエイティブ・ターゲティングを提案"
+          
+        - step: "03"
+          title: "広告配信開始"
+          description: "アカウント設定・広告作成・配信開始"
+          
+        - step: "04"
+          title: "効果測定・改善"
+          description: "データ分析に基づいた継続的な改善"
+
+  # ==========================================
+  # FAQ
+  # ==========================================
+  - id: "faq"
+    name: "よくある質問"
+    type: "accordion_faq"
+    
+    content:
+      questions:
+        - q: "最低契約期間はありますか？"
+          a: "3ヶ月からの契約となります。広告の効果測定には一定期間が必要なため、最低3ヶ月をお願いしております。"
+          
+        - q: "広告費はいくら必要ですか？"
+          a: "最低月30万円から推奨しています。広告費が少ないと十分なデータが取得できず、最適化が困難になります。"
+          
+        - q: "レポートの頻度は？"
+          a: "スタートプランは月次、スタンダードプランは週次、プレミアムプランは日次レポートを提供します。"
+          
+        - q: "広告クリエイティブ制作は含まれますか？"
+          a: "基本的な画像・テキスト広告の制作は含まれます。動画制作やLP制作は別途料金となります。"
+          
+        - q: "途中解約は可能ですか？"
+          a: "契約期間満了後、1ヶ月前の通知で解約可能です。"
+
+  # ==========================================
+  # CTA
+  # ==========================================
+  - id: "cta"
+    name: "お問い合わせCTA"
+    
+    content:
+      heading: "まずは無料相談から"
+      description: "現在の広告運用を無料で診断します"
+      cta:
+        text: "無料相談を予約する"
+        link: "/question"

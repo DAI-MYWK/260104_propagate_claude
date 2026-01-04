@@ -1,0 +1,391 @@
+# ============================================
+# GLOBAL CONFIGURATION
+# サイト全体の共通設定
+# ============================================
+
+site:
+  name: "Propagate Inc."
+  base_url: "https://www.propagateinc.com"
+  language: "ja"
+  charset: "UTF-8"
+  viewport: "width=device-width, initial-scale=1.0"
+
+# ============================================
+# DESIGN TOKENS
+# ============================================
+
+colors:
+  # Primary Colors
+  primary:
+    main: "#4ECDC4"
+    light: "#7FE5DC"
+    dark: "#3AB5AC"
+    contrast: "#FFFFFF"
+    
+  # Secondary Colors
+  secondary:
+    main: "#FF6B6B"
+    light: "#FF9999"
+    dark: "#E55555"
+    contrast: "#FFFFFF"
+    
+  # Accent Colors
+  accent:
+    yellow: "#FFD93D"
+    green: "#51CF66"
+    blue: "#4A90E2"
+    purple: "#9B59B6"
+    
+  # Neutral Colors
+  neutral:
+    white: "#FFFFFF"
+    black: "#000000"
+    gray_50: "#FAFAFA"
+    gray_100: "#F7F7F7"
+    gray_200: "#E5E5E5"
+    gray_300: "#CCCCCC"
+    gray_400: "#B3B3B3"
+    gray_500: "#999999"
+    gray_600: "#808080"
+    gray_700: "#666666"
+    gray_800: "#4D4D4D"
+    gray_900: "#333333"
+    
+  # Semantic Colors
+  success: "#51CF66"
+  warning: "#FFD93D"
+  error: "#FF6B6B"
+  info: "#4ECDC4"
+
+# ============================================
+# TYPOGRAPHY
+# ============================================
+
+typography:
+  # Font Families
+  font_families:
+    primary: "'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+    heading: "'Montserrat', 'Noto Sans JP', sans-serif"
+    code: "'Source Code Pro', 'Courier New', monospace"
+    
+  # Font Sizes
+  font_sizes:
+    # Utility Sizes
+    xs: "12px"
+    sm: "14px"
+    base: "16px"
+    lg: "18px"
+    xl: "20px"
+    xxl: "24px"
+    
+    # Heading Sizes (Desktop)
+    h6: "16px"
+    h5: "20px"
+    h4: "24px"
+    h3: "32px"
+    h2: "48px"
+    h1: "64px"
+    display: "80px"
+    
+    # Heading Sizes (Mobile)
+    h6_mobile: "14px"
+    h5_mobile: "16px"
+    h4_mobile: "18px"
+    h3_mobile: "24px"
+    h2_mobile: "32px"
+    h1_mobile: "40px"
+    display_mobile: "48px"
+    
+  # Font Weights
+  font_weights:
+    light: 300
+    regular: 400
+    medium: 500
+    semibold: 600
+    bold: 700
+    extrabold: 800
+    black: 900
+    
+  # Line Heights
+  line_heights:
+    tight: 1.2
+    snug: 1.375
+    normal: 1.5
+    relaxed: 1.75
+    loose: 2.0
+    
+  # Letter Spacings
+  letter_spacings:
+    tighter: "-0.05em"
+    tight: "-0.02em"
+    normal: "0"
+    wide: "0.02em"
+    wider: "0.05em"
+    widest: "0.1em"
+
+# ============================================
+# SPACING SCALE
+# ============================================
+
+spacing:
+  # Base Spacing Units
+  0: "0"
+  1: "4px"
+  2: "8px"
+  3: "12px"
+  4: "16px"
+  5: "20px"
+  6: "24px"
+  8: "32px"
+  10: "40px"
+  12: "48px"
+  16: "64px"
+  20: "80px"
+  24: "96px"
+  32: "128px"
+  40: "160px"
+  48: "192px"
+  56: "224px"
+  64: "256px"
+  
+  # Semantic Spacing
+  section_padding_desktop: "120px"
+  section_padding_tablet: "80px"
+  section_padding_mobile: "60px"
+  
+  container_padding_desktop: "40px"
+  container_padding_mobile: "20px"
+
+# ============================================
+# LAYOUT
+# ============================================
+
+layout:
+  # Container
+  container_max_width: "1200px"
+  container_padding_x: "40px"
+  container_padding_x_mobile: "20px"
+  
+  # Grid
+  grid_columns: 12
+  grid_gap: "32px"
+  grid_gap_mobile: "16px"
+  
+  # Header
+  header_height: "80px"
+  header_height_mobile: "60px"
+  
+  # Footer
+  footer_padding_y: "80px"
+
+# ============================================
+# BORDER RADIUS
+# ============================================
+
+border_radius:
+  none: "0"
+  sm: "4px"
+  md: "8px"
+  lg: "12px"
+  xl: "16px"
+  xxl: "24px"
+  full: "9999px"
+
+# ============================================
+# SHADOWS
+# ============================================
+
+shadows:
+  sm: "0 2px 4px rgba(0, 0, 0, 0.08)"
+  md: "0 4px 8px rgba(0, 0, 0, 0.1)"
+  lg: "0 8px 16px rgba(0, 0, 0, 0.12)"
+  xl: "0 12px 24px rgba(0, 0, 0, 0.15)"
+  xxl: "0 20px 40px rgba(0, 0, 0, 0.18)"
+  inner: "inset 0 2px 4px rgba(0, 0, 0, 0.06)"
+  
+  # Colored Shadows
+  primary: "0 8px 20px rgba(78, 205, 196, 0.3)"
+  secondary: "0 8px 20px rgba(255, 107, 107, 0.3)"
+  accent: "0 8px 20px rgba(255, 217, 61, 0.3)"
+
+# ============================================
+# TRANSITIONS
+# ============================================
+
+transitions:
+  # Duration
+  duration:
+    fast: "150ms"
+    base: "300ms"
+    slow: "500ms"
+    slower: "800ms"
+    
+  # Easing Functions
+  easing:
+    linear: "linear"
+    ease: "ease"
+    ease_in: "ease-in"
+    ease_out: "ease-out"
+    ease_in_out: "ease-in-out"
+    cubic_bezier: "cubic-bezier(0.4, 0, 0.2, 1)"
+
+# ============================================
+# BREAKPOINTS
+# ============================================
+
+breakpoints:
+  xs: "0px"
+  sm: "640px"
+  md: "768px"
+  lg: "1024px"
+  xl: "1280px"
+  xxl: "1536px"
+
+# ============================================
+# Z-INDEX SCALE
+# ============================================
+
+z_index:
+  dropdown: 1000
+  sticky: 1020
+  fixed: 1030
+  modal_backdrop: 1040
+  modal: 1050
+  popover: 1060
+  tooltip: 1070
+
+# ============================================
+# GLOBAL NAVIGATION
+# ============================================
+
+navigation:
+  header:
+    logo:
+      src: "/assets/images/logo.svg"
+      alt: "Propagate"
+      width: "180px"
+      height: "40px"
+      
+    menu_items:
+      - label: "TOP"
+        url: "/"
+        
+      - label: "サービス一覧"
+        url: "#services"
+        dropdown:
+          - label: "WEB制作"
+            url: "/web-design"
+            icon: "web_icon.svg"
+            
+          - label: "Shopify EC制作"
+            url: "/shopify-design"
+            icon: "ec_icon.svg"
+            
+          - label: "広告運用"
+            url: "/subscription-ad"
+            icon: "ad_icon.svg"
+            
+          - label: "TikTok CM"
+            url: "/spark-buzz"
+            icon: "tiktok_icon.svg"
+            
+          - label: "SEO対策"
+            url: "https://www.smart-seo.jp/"
+            icon: "seo_icon.svg"
+            external: true
+            
+          - label: "採用DX"
+            url: "https://www.saiyo-dx.jp/"
+            icon: "recruit_icon.svg"
+            external: true
+            
+          - label: "Instagram DM営業"
+            url: "/instagram-dmsystem"
+            icon: "dm_icon.svg"
+            
+      - label: "実績"
+        url: "#cases"
+        
+      - label: "会社情報"
+        url: "/company"
+        
+      - label: "採用情報"
+        url: "/recruit"
+        
+      - label: "お問い合わせ・資料請求"
+        url: "/contact"
+        style: "cta"
+        
+  footer:
+    sections:
+      - title: "サービス"
+        links:
+          - label: "WEB制作"
+            url: "/web-design"
+          - label: "Shopify EC"
+            url: "/shopify-design"
+          - label: "広告運用"
+            url: "/subscription-ad"
+          - label: "TikTok CM"
+            url: "/spark-buzz"
+            
+      - title: "会社情報"
+        links:
+          - label: "企業理念"
+            url: "/company#philosophy"
+          - label: "会社概要"
+            url: "/company"
+          - label: "代表メッセージ"
+            url: "/company#message"
+            
+      - title: "お問い合わせ"
+        links:
+          - label: "資料ダウンロード"
+            url: "/question"
+          - label: "LINE相談"
+            url: "https://line.me/..."
+            
+    social_links:
+      - platform: "facebook"
+        url: "https://facebook.com/propagate"
+        icon: "facebook_icon.svg"
+      - platform: "twitter"
+        url: "https://twitter.com/propagate_inc"
+        icon: "twitter_icon.svg"
+      - platform: "instagram"
+        url: "https://instagram.com/propagate_inc"
+        icon: "instagram_icon.svg"
+        
+    copyright: "© 2020 Propagate Inc. All rights reserved."
+
+# ============================================
+# SEO DEFAULTS
+# ============================================
+
+seo:
+  default_title: "Propagate Inc. | 挑戦者の価値を届ける"
+  title_template: "%s | Propagate Inc."
+  default_description: "月額9,800円〜のホームページ制作・マーケティングサービス。挑戦者の価値を届けるプロパゲート。"
+  default_keywords: "ホームページ制作,Web制作,EC構築,広告運用,マーケティング,Shopify,SEO対策"
+  default_og_image: "/assets/images/og_default.jpg"
+  twitter_card: "summary_large_image"
+  twitter_site: "@propagate_inc"
+  canonical_base: "https://www.propagateinc.com"
+
+# ============================================
+# PERFORMANCE
+# ============================================
+
+performance:
+  lazy_loading:
+    enabled: true
+    threshold: 0.1
+    
+  image_optimization:
+    formats: ["webp", "avif", "jpg"]
+    sizes: [640, 768, 1024, 1280, 1920]
+    quality: 80
+    
+  critical_css:
+    enabled: true
+    inline_threshold: "14KB"

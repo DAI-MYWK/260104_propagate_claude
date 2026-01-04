@@ -1,0 +1,274 @@
+/* ============================================
+   QUESTION (CONTACT) PAGE STYLES
+   ============================================ */
+
+/* ============================================
+   Contact Hero Section
+   ============================================ */
+.contact-hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-main), #44A08D);
+  text-align: center;
+}
+
+.contact-hero__title {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin: 0 0 var(--spacing-6) 0;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-hero__subtitle {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contact-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.9), rgba(68, 160, 141, 0.9));
+}
+
+/* ============================================
+   Contact Methods Section
+   ============================================ */
+.contact-methods {
+  padding: 80px 0;
+  background: var(--color-gray-100);
+}
+
+.contact-methods__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-10);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-method-card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-12);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base) ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  align-items: center;
+}
+
+.contact-method-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-method-card--line {
+  border: 3px solid #00B900;
+}
+
+.contact-method-card__badge {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-secondary-main);
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius-full);
+}
+
+.contact-method-card__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.contact-method-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-method-card__title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+.contact-method-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ============================================
+   Contact Form Section
+   ============================================ */
+.contact-form-section {
+  padding: 120px 0;
+  background: var(--color-gray-100);
+}
+
+.contact-form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-12);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+/* ============================================
+   FAQ Section
+   ============================================ */
+.faq-section {
+  padding: 120px 0;
+  background: var(--color-white);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.faq__item {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.faq__question {
+  padding: var(--spacing-6) var(--spacing-8);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background var(--transition-base) ease;
+  user-select: none;
+}
+
+.faq__question:hover {
+  background: var(--color-gray-100);
+}
+
+.faq__question::after {
+  content: '+';
+  font-size: 24px;
+  color: var(--color-primary-main);
+  font-weight: var(--font-weight-bold);
+  transition: transform var(--transition-base) ease;
+}
+
+.faq__item--open .faq__question::after {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base) ease;
+}
+
+.faq__answer-content {
+  padding: 0 var(--spacing-8) var(--spacing-6);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  line-height: var(--line-height-relaxed);
+}
+
+.faq__answer-content p {
+  margin: 0;
+}
+
+/* ============================================
+   Phone Contact Section
+   ============================================ */
+.phone-contact-section {
+  padding: 80px 0;
+  background: var(--color-gray-100);
+}
+
+.phone-contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-12);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.phone-contact-card__title {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--spacing-8) 0;
+}
+
+.phone-contact-card__number {
+  display: block;
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-main);
+  text-decoration: none;
+  margin: 0 0 var(--spacing-6) 0;
+  transition: color var(--transition-base) ease;
+}
+
+.phone-contact-card__number:hover {
+  color: var(--color-primary-dark);
+}
+
+.phone-contact-card__hours {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700);
+  margin: 0 0 var(--spacing-4) 0;
+}
+
+.phone-contact-card__note {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin: 0;
+}
+

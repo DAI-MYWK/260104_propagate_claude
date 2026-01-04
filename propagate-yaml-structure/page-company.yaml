@@ -1,0 +1,685 @@
+# ====================================================================
+# 会社情報ページ (Company Page) - 完全YAML仕様
+# URL: /company
+# ====================================================================
+
+page:
+  id: "company"
+  slug: "company"
+  title: "会社情報 | Propagate Inc."
+  url: "/company"
+  
+  meta:
+    description: "Propagate Inc.の会社概要、代表メッセージ、企業理念、沿革をご紹介します。"
+    keywords: "会社情報, 企業概要, 代表メッセージ, Propagate"
+    og_title: "会社情報 | Propagate Inc."
+    og_description: "Propagate Inc.の会社概要、代表メッセージ、企業理念、沿革"
+    og_image: "assets/images/company_og.jpg"
+    canonical: "https://www.propagateinc.com/company"
+  
+  layout:
+    type: "company_page"
+    max_width: "1200px"
+    background: "#FFFFFF"
+    
+  # ====================================================================
+  # セクション構成
+  # ====================================================================
+  sections:
+    
+    # ------------------------------------------------------------------
+    # 1. ヒーローセクション
+    # ------------------------------------------------------------------
+    - id: "company_hero"
+      type: "hero_simple"
+      order: 1
+      
+      layout:
+        height: 
+          desktop: "500px"
+          tablet: "400px"
+          mobile: "350px"
+        alignment: "center"
+        overlay: "linear-gradient(135deg, rgba(78, 205, 196, 0.85) 0%, rgba(44, 62, 80, 0.85) 100%)"
+        
+      background:
+        type: "image"
+        image: "assets/images/company_hero.jpg"
+        position: "center center"
+        size: "cover"
+        attachment: "fixed"
+        
+      content:
+        heading:
+          text: "会社情報"
+          level: "h1"
+          style:
+            font_family: "'Montserrat', sans-serif"
+            font_size:
+              desktop: "64px"
+              tablet: "48px"
+              mobile: "36px"
+            font_weight: 700
+            color: "#FFFFFF"
+            letter_spacing: "0.05em"
+            text_align: "center"
+            text_shadow: "0 2px 10px rgba(0,0,0,0.3)"
+            margin_bottom: "24px"
+            
+        subheading:
+          text: "About Propagate Inc."
+          style:
+            font_family: "'Noto Sans JP', sans-serif"
+            font_size:
+              desktop: "20px"
+              tablet: "18px"
+              mobile: "16px"
+            font_weight: 400
+            color: "#FFFFFF"
+            text_align: "center"
+            opacity: 0.95
+            
+      animation:
+        entrance:
+          type: "fade_in_up"
+          duration: "1s"
+          delay: "0.2s"
+          
+    # ------------------------------------------------------------------
+    # 2. 会社概要セクション
+    # ------------------------------------------------------------------
+    - id: "company_overview"
+      type: "content_section"
+      order: 2
+      
+      layout:
+        padding:
+          desktop: "100px 0"
+          mobile: "60px 0"
+        background: "#F7F7F7"
+        
+      content:
+        heading:
+          text: "会社概要"
+          level: "h2"
+          style:
+            font_family: "'Montserrat', sans-serif"
+            font_size:
+              desktop: "48px"
+              tablet: "38px"
+              mobile: "32px"
+            font_weight: 700
+            color: "#2C3E50"
+            text_align: "center"
+            margin_bottom: "60px"
+            
+        company_info:
+          type: "table"
+          style:
+            max_width: "900px"
+            margin: "0 auto"
+            background: "#FFFFFF"
+            border_radius: "12px"
+            box_shadow: "0 4px 20px rgba(0,0,0,0.08)"
+            padding: "40px"
+            
+          rows:
+            - label: "会社名"
+              value: "株式会社Propagate"
+              
+            - label: "代表取締役"
+              value: "山田太郎"
+              
+            - label: "設立"
+              value: "2020年4月1日"
+              
+            - label: "資本金"
+              value: "1,000万円"
+              
+            - label: "所在地"
+              value: "〒150-0000 東京都渋谷区〇〇 1-2-3 〇〇ビル 5F"
+              
+            - label: "電話番号"
+              value: "03-XXXX-XXXX"
+              
+            - label: "事業内容"
+              value: |
+                ・Webサイト制作
+                ・ECサイト構築（Shopify）
+                ・Web広告運用
+                ・TikTok動画制作・運用
+                ・SEO対策
+                ・デジタルマーケティングコンサルティング
+              
+          row_style:
+            border_bottom: "1px solid #E0E0E0"
+            padding: "20px 0"
+            display: "flex"
+            label_width: "200px"
+            label_style:
+              font_weight: 700
+              color: "#2C3E50"
+              font_size: "16px"
+            value_style:
+              color: "#666666"
+              font_size: "16px"
+              line_height: 1.8
+              
+    # ------------------------------------------------------------------
+    # 3. 代表メッセージセクション
+    # ------------------------------------------------------------------
+    - id: "ceo_message"
+      type: "two_column_content"
+      order: 3
+      
+      layout:
+        padding:
+          desktop: "100px 0"
+          mobile: "60px 0"
+        background: "#FFFFFF"
+        
+      content:
+        heading:
+          text: "代表メッセージ"
+          level: "h2"
+          style:
+            font_family: "'Montserrat', sans-serif"
+            font_size:
+              desktop: "48px"
+              tablet: "38px"
+              mobile: "32px"
+            font_weight: 700
+            color: "#2C3E50"
+            text_align: "center"
+            margin_bottom: "60px"
+            
+        columns:
+          layout: "image_left_text_right"
+          gap: "60px"
+          alignment: "center"
+          
+          left:
+            type: "image"
+            image: "assets/images/ceo_profile.jpg"
+            alt: "代表取締役 山田太郎"
+            style:
+              width: "100%"
+              max_width: "400px"
+              border_radius: "12px"
+              box_shadow: "0 8px 30px rgba(0,0,0,0.12)"
+              
+          right:
+            type: "text_content"
+            
+            name:
+              text: "代表取締役"
+              style:
+                font_size: "14px"
+                color: "#4ECDC4"
+                font_weight: 700
+                margin_bottom: "8px"
+                
+            title:
+              text: "山田 太郎"
+              style:
+                font_size: "28px"
+                color: "#2C3E50"
+                font_weight: 700
+                margin_bottom: "30px"
+                
+            message:
+              text: |
+                私たちPropagateは、「デジタルで事業を成長させる」というミッションのもと、
+                中小企業様のデジタルマーケティングを全力でサポートしています。
+                
+                創業以来、数多くのクライアント様と共に歩み、
+                Webサイト制作、EC構築、広告運用、SNSマーケティングなど、
+                幅広い領域で成果を上げてまいりました。
+                
+                私たちが大切にしているのは、「成果」です。
+                見た目の美しさだけではなく、ビジネスの成長に直結する施策を、
+                データに基づいて設計・実行します。
+                
+                これからも、お客様のビジネスパートナーとして、
+                共に成長し続けることをお約束いたします。
+                
+              style:
+                font_size: "16px"
+                line_height: 2
+                color: "#666666"
+                white_space: "pre-line"
+                
+      animation:
+        scroll_trigger:
+          type: "fade_in_up"
+          threshold: 0.2
+          
+    # ------------------------------------------------------------------
+    # 4. 企業理念セクション
+    # ------------------------------------------------------------------
+    - id: "philosophy"
+      type: "content_cards"
+      order: 4
+      
+      layout:
+        padding:
+          desktop: "100px 0"
+          mobile: "60px 0"
+        background: "#F7F7F7"
+        
+      content:
+        heading:
+          text: "企業理念"
+          level: "h2"
+          style:
+            font_family: "'Montserrat', sans-serif"
+            font_size:
+              desktop: "48px"
+              tablet: "38px"
+              mobile: "32px"
+            font_weight: 700
+            color: "#2C3E50"
+            text_align: "center"
+            margin_bottom: "60px"
+            
+        cards:
+          layout: "grid"
+          columns:
+            desktop: 3
+            tablet: 2
+            mobile: 1
+          gap: "32px"
+          
+          items:
+            - title: "Mission"
+              subtitle: "ミッション"
+              description: "デジタルの力で、全ての企業に成長の機会を提供する"
+              icon: "🎯"
+              style:
+                background: "#FFFFFF"
+                padding: "40px"
+                border_radius: "12px"
+                box_shadow: "0 4px 20px rgba(0,0,0,0.08)"
+                text_align: "center"
+                
+            - title: "Vision"
+              subtitle: "ビジョン"
+              description: "日本中の企業がデジタルマーケティングで成功する世界を創る"
+              icon: "🌟"
+              style:
+                background: "#FFFFFF"
+                padding: "40px"
+                border_radius: "12px"
+                box_shadow: "0 4px 20px rgba(0,0,0,0.08)"
+                text_align: "center"
+                
+            - title: "Value"
+              subtitle: "バリュー"
+              description: "成果にこだわり、誠実に、スピーディーに"
+              icon: "💎"
+              style:
+                background: "#FFFFFF"
+                padding: "40px"
+                border_radius: "12px"
+                box_shadow: "0 4px 20px rgba(0,0,0,0.08)"
+                text_align: "center"
+                
+      animation:
+        scroll_trigger:
+          type: "fade_in_up_stagger"
+          stagger_delay: "0.15s"
+          threshold: 0.2
+          
+    # ------------------------------------------------------------------
+    # 5. 沿革セクション
+    # ------------------------------------------------------------------
+    - id: "history"
+      type: "timeline"
+      order: 5
+      
+      layout:
+        padding:
+          desktop: "100px 0"
+          mobile: "60px 0"
+        background: "#FFFFFF"
+        
+      content:
+        heading:
+          text: "沿革"
+          level: "h2"
+          style:
+            font_family: "'Montserrat', sans-serif"
+            font_size:
+              desktop: "48px"
+              tablet: "38px"
+              mobile: "32px"
+            font_weight: 700
+            color: "#2C3E50"
+            text_align: "center"
+            margin_bottom: "60px"
+            
+        timeline:
+          style:
+            max_width: "800px"
+            margin: "0 auto"
+            
+          items:
+            - year: "2020年4月"
+              event: "株式会社Propagate設立"
+              description: "Webマーケティング事業をスタート"
+              
+            - year: "2020年10月"
+              event: "Shopify公式パートナー認定"
+              description: "EC構築サービスを本格展開"
+              
+            - year: "2021年3月"
+              event: "広告運用サブスクサービス開始"
+              description: "中小企業向けに月額9,800円の広告運用サービスをリリース"
+              
+            - year: "2021年9月"
+              event: "取引社数100社突破"
+              description: "累計100社以上のクライアント様とお取引開始"
+              
+            - year: "2022年2月"
+              event: "TikTok動画制作サービス開始"
+              description: "SPARK BUZZブランドでTikTok CM制作サービスを開始"
+              
+            - year: "2022年8月"
+              event: "オフィス移転"
+              description: "渋谷の新オフィスに移転し、組織拡大"
+              
+            - year: "2023年4月"
+              event: "取引社数300社突破"
+              description: "累計300社以上のクライアント様とお取引"
+              
+            - year: "2024年1月"
+              event: "AI SEOサービスリリース"
+              description: "AI技術を活用したSEO対策サービスを開始"
+              
+          item_style:
+            display: "flex"
+            margin_bottom: "40px"
+            position: "relative"
+            padding_left: "60px"
+            
+            year_style:
+              font_family: "'Montserrat', sans-serif"
+              font_size: "18px"
+              font_weight: 700
+              color: "#4ECDC4"
+              margin_bottom: "8px"
+              
+            event_style:
+              font_size: "20px"
+              font_weight: 700
+              color: "#2C3E50"
+              margin_bottom: "8px"
+              
+            description_style:
+              font_size: "16px"
+              color: "#666666"
+              line_height: 1.8
+              
+            marker:
+              width: "16px"
+              height: "16px"
+              background: "#4ECDC4"
+              border_radius: "50%"
+              position: "absolute"
+              left: "20px"
+              top: "4px"
+              
+            line:
+              width: "2px"
+              background: "#E0E0E0"
+              position: "absolute"
+              left: "27px"
+              top: "20px"
+              height: "calc(100% + 20px)"
+              
+      animation:
+        scroll_trigger:
+          type: "fade_in_up_stagger"
+          stagger_delay: "0.1s"
+          threshold: 0.1
+          
+    # ------------------------------------------------------------------
+    # 6. アクセスマップセクション
+    # ------------------------------------------------------------------
+    - id: "access_map"
+      type: "map_section"
+      order: 6
+      
+      layout:
+        padding:
+          desktop: "100px 0"
+          mobile: "60px 0"
+        background: "#F7F7F7"
+        
+      content:
+        heading:
+          text: "アクセス"
+          level: "h2"
+          style:
+            font_family: "'Montserrat', sans-serif"
+            font_size:
+              desktop: "48px"
+              tablet: "38px"
+              mobile: "32px"
+            font_weight: 700
+            color: "#2C3E50"
+            text_align: "center"
+            margin_bottom: "60px"
+            
+        map:
+          type: "google_maps_embed"
+          location: "東京都渋谷区"
+          embed_url: "https://www.google.com/maps/embed?pb=..."
+          style:
+            width: "100%"
+            height: "450px"
+            border_radius: "12px"
+            box_shadow: "0 4px 20px rgba(0,0,0,0.08)"
+            margin_bottom: "40px"
+            
+        access_info:
+          style:
+            max_width: "800px"
+            margin: "0 auto"
+            background: "#FFFFFF"
+            padding: "40px"
+            border_radius: "12px"
+            box_shadow: "0 4px 20px rgba(0,0,0,0.08)"
+            
+          items:
+            - label: "住所"
+              value: "〒150-0000 東京都渋谷区〇〇 1-2-3 〇〇ビル 5F"
+              
+            - label: "アクセス"
+              value: |
+                ・JR山手線「渋谷駅」徒歩5分
+                ・東京メトロ銀座線「渋谷駅」徒歩3分
+                ・東急東横線「渋谷駅」徒歩4分
+              
+            - label: "営業時間"
+              value: "平日 9:00〜18:00（土日祝休み）"
+              
+    # ------------------------------------------------------------------
+    # 7. お問い合わせCTAセクション
+    # ------------------------------------------------------------------
+    - id: "contact_cta"
+      type: "cta_section"
+      order: 7
+      
+      layout:
+        padding:
+          desktop: "100px 0"
+          mobile: "60px 0"
+        background: "linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%)"
+        text_align: "center"
+        
+      content:
+        heading:
+          text: "お気軽にお問い合わせください"
+          level: "h2"
+          style:
+            font_family: "'Montserrat', sans-serif"
+            font_size:
+              desktop: "42px"
+              tablet: "34px"
+              mobile: "28px"
+            font_weight: 700
+            color: "#FFFFFF"
+            margin_bottom: "24px"
+            
+        description:
+          text: "Webサイト制作、広告運用、ECサイト構築など、お気軽にご相談ください"
+          style:
+            font_size: "18px"
+            color: "#FFFFFF"
+            opacity: 0.95
+            margin_bottom: "40px"
+            
+        buttons:
+          - text: "お問い合わせ"
+            link: "/question"
+            style:
+              background: "#FFFFFF"
+              color: "#4ECDC4"
+              padding: "18px 48px"
+              border_radius: "50px"
+              font_size: "18px"
+              font_weight: 700
+              box_shadow: "0 4px 20px rgba(0,0,0,0.15)"
+              transition: "all 0.3s ease"
+              hover:
+                transform: "translateY(-3px)"
+                box_shadow: "0 8px 30px rgba(0,0,0,0.2)"
+                
+          - text: "LINE で相談"
+            link: "https://lin.ee/xxxxxxxx"
+            icon: "line"
+            style:
+              background: "transparent"
+              color: "#FFFFFF"
+              border: "2px solid #FFFFFF"
+              padding: "16px 48px"
+              border_radius: "50px"
+              font_size: "18px"
+              font_weight: 700
+              margin_left: "20px"
+              transition: "all 0.3s ease"
+              hover:
+                background: "#FFFFFF"
+                color: "#4ECDC4"
+                
+      animation:
+        scroll_trigger:
+          type: "fade_in_up"
+          threshold: 0.2
+
+# ====================================================================
+# ページレベルのCSS仕様
+# ====================================================================
+css_specifications:
+  
+  # 共通スタイル
+  global:
+    font_smoothing: "antialiased"
+    text_rendering: "optimizeLegibility"
+    
+  # レスポンシブブレークポイント
+  breakpoints:
+    desktop: "1200px"
+    tablet: "768px"
+    mobile: "480px"
+    
+  # アニメーション
+  animations:
+    fade_in_up:
+      keyframes:
+        from:
+          opacity: 0
+          transform: "translateY(30px)"
+        to:
+          opacity: 1
+          transform: "translateY(0)"
+      duration: "0.8s"
+      easing: "cubic-bezier(0.4, 0, 0.2, 1)"
+      
+    fade_in_up_stagger:
+      base: "fade_in_up"
+      stagger_delay: "0.1s"
+      
+  # ホバーエフェクト
+  hover_effects:
+    card_lift:
+      transform: "translateY(-8px)"
+      box_shadow: "0 12px 40px rgba(0,0,0,0.15)"
+      transition: "all 0.3s ease"
+      
+    button_lift:
+      transform: "translateY(-3px)"
+      box_shadow: "0 8px 30px rgba(0,0,0,0.2)"
+      transition: "all 0.3s ease"
+
+# ====================================================================
+# JavaScript仕様
+# ====================================================================
+javascript_specifications:
+  
+  # スクロールアニメーション
+  scroll_animations:
+    observer:
+      threshold: [0, 0.2, 0.5, 1]
+      rootMargin: "0px 0px -100px 0px"
+      
+  # タイムライン表示制御
+  timeline:
+    sequential_reveal: true
+    reveal_on_scroll: true
+    
+  # スムーズスクロール
+  smooth_scroll:
+    enabled: true
+    duration: "800ms"
+    easing: "ease-in-out"
+
+# ====================================================================
+# SEO設定
+# ====================================================================
+seo:
+  title: "会社情報 | Propagate Inc."
+  meta_description: "Propagate Inc.の会社概要、代表メッセージ、企業理念、沿革をご紹介します。"
+  structured_data:
+    type: "Organization"
+    name: "株式会社Propagate"
+    url: "https://www.propagateinc.com"
+    logo: "https://www.propagateinc.com/assets/images/logo.svg"
+    foundingDate: "2020-04-01"
+    address:
+      type: "PostalAddress"
+      addressCountry: "JP"
+      addressRegion: "東京都"
+      addressLocality: "渋谷区"
+
+# ====================================================================
+# パフォーマンス設定
+# ====================================================================
+performance:
+  lazy_loading:
+    images: true
+    iframes: true
+  preload:
+    - "assets/images/company_hero.jpg"
+  critical_css: true
+  
+# ====================================================================
+# アクセシビリティ
+# ====================================================================
+accessibility:
+  landmarks: true
+  skip_links: true
+  aria_labels: true
+  focus_visible: true
+  keyboard_navigation: true

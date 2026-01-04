@@ -1,0 +1,759 @@
+# ============================================
+# SPARK BUZZ PAGE - COMPLETE SPECIFICATION
+# TikTok CMページ完全仕様書
+# ============================================
+
+page:
+  id: "spark_buzz"
+  path: "/spark-buzz"
+  
+  meta:
+    title: "TikTok CM配信サービス SPARK BUZZ | Propagate Inc."
+    description: "TikTok × インフルエンサーでバズを作る。動画制作から配信まで一貫サポート。"
+    keywords: "TikTok,CM配信,動画制作,インフルエンサー,バズマーケティング"
+    og_image: "/assets/images/og_sparkbuzz.jpg"
+
+sections:
+  # ==========================================
+  # HERO
+  # ==========================================
+  - id: "hero"
+    name: "ヒーロー"
+    type: "video_hero"
+    
+    content:
+      logo: "sparkbuzz_logo.png"
+      heading: "TikTok CM配信サービス"
+      subheading: "TikTok × インフルエンサーでバズを作る"
+      features:
+        - "1ヶ月でフォロワー1,000人増加"
+        - "平均再生回数10万回以上"
+      background_video: "tiktok_hero_video.mp4"
+      background_poster: "tiktok_poster.jpg"
+    
+    css:
+      section:
+        min_height: "100vh"
+        position: "relative"
+        display: "flex"
+        align_items: "center"
+        justify_content: "center"
+        
+      background_video:
+        position: "absolute"
+        top: "0"
+        left: "0"
+        width: "100%"
+        height: "100%"
+        object_fit: "cover"
+        z_index: 1
+        
+      overlay:
+        position: "absolute"
+        top: "0"
+        left: "0"
+        width: "100%"
+        height: "100%"
+        background: "rgba(0, 0, 0, 0.6)"
+        z_index: 2
+        
+      content:
+        position: "relative"
+        z_index: 3
+        text_align: "center"
+        color: "#FFFFFF"
+
+  # ==========================================
+  # PROBLEM SOLUTION
+  # ==========================================
+  - id: "problem_solution"
+    name: "課題と解決策"
+    type: "problem_solution"
+    
+    content:
+      problem:
+        heading: "こんなお悩みありませんか？"
+        items:
+          - "TikTokを始めたいが何から始めればいいかわからない"
+          - "動画制作のノウハウがない"
+          - "フォロワーが増えない"
+          - "再生回数が伸びない"
+          - "バズる動画が作れない"
+          
+      solution:
+        heading: "Spark BUZZなら全て解決"
+        description: "企画・撮影・編集・投稿・分析まで全てお任せください"
+        features:
+          - icon: "planning_icon.svg"
+            title: "プロの企画"
+            description: "バズる動画を企画"
+            
+          - icon: "filming_icon.svg"
+            title: "プロの撮影"
+            description: "高品質な映像"
+            
+          - icon: "editing_icon.svg"
+            title: "プロの編集"
+            description: "TikTok最適化"
+            
+          - icon: "analytics_icon.svg"
+            title: "データ分析"
+            description: "効果測定・改善"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#F7F7F7"
+        
+      container:
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+      problem:
+        background: "#FFFFFF"
+        border_radius: "16px"
+        padding: "60px"
+        margin_bottom: "60px"
+        
+      problem_heading:
+        font_size: "32px"
+        font_weight: 700
+        color: "#333333"
+        text_align: "center"
+        margin_bottom: "40px"
+        
+      problem_items:
+        display: "grid"
+        grid_template_columns: "repeat(2, 1fr)"
+        gap: "24px"
+        
+        mobile:
+          grid_template_columns: "1fr"
+          
+      problem_item:
+        display: "flex"
+        align_items: "flex-start"
+        gap: "16px"
+        font_size: "18px"
+        color: "#666666"
+        
+        before:
+          content: "'×'"
+          color: "#FF6B6B"
+          font_size: "24px"
+          font_weight: 700
+          
+      solution:
+        background: "linear-gradient(135deg, #4ECDC4, #44A08D)"
+        border_radius: "16px"
+        padding: "60px"
+        color: "#FFFFFF"
+        
+      solution_heading:
+        font_size: "32px"
+        font_weight: 700
+        text_align: "center"
+        margin_bottom: "24px"
+        
+      solution_description:
+        font_size: "20px"
+        text_align: "center"
+        margin_bottom: "48px"
+        opacity: 0.95
+        
+      solution_features:
+        display: "grid"
+        grid_template_columns: "repeat(4, 1fr)"
+        gap: "32px"
+        
+        tablet:
+          grid_template_columns: "repeat(2, 1fr)"
+          
+        mobile:
+          grid_template_columns: "1fr"
+
+  # ==========================================
+  # TIKTOK DATA
+  # ==========================================
+  - id: "tiktok_data"
+    name: "TikTokの可能性"
+    type: "data_showcase"
+    
+    content:
+      heading:
+        title: "TikTokの可能性"
+        subtitle: "なぜ今TikTokなのか？"
+        
+      stats:
+        - number: "34億回"
+          label: "総ダウンロード数"
+          source: "Data Source"
+          icon: "download_icon.svg"
+          
+        - number: "646万人"
+          label: "日本国内ユーザー数"
+          source: "Data Source"
+          icon: "users_icon.svg"
+          
+        - number: "1,850万DL"
+          label: "2020年のダウンロード数"
+          source: "App Annie"
+          icon: "trend_icon.svg"
+          
+        - number: "5位"
+          label: "世界アプリランキング"
+          source: "Kanter 2020年5月"
+          icon: "ranking_icon.svg"
+          
+      growth:
+        title: "TikTokは10〜60代まで幅広く支持されています"
+        description: "SNSの中でTikTokだけが成長を続けています"
+        chart: "tiktok_growth_chart.svg"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#FFFFFF"
+        
+      stats_grid:
+        display: "grid"
+        grid_template_columns: "repeat(4, 1fr)"
+        gap: "40px"
+        max_width: "1200px"
+        margin: "0 auto 80px"
+        padding: "0 40px"
+        
+        tablet:
+          grid_template_columns: "repeat(2, 1fr)"
+          
+        mobile:
+          grid_template_columns: "1fr"
+          
+      stat_item:
+        text_align: "center"
+        padding: "40px"
+        background: "#F7F7F7"
+        border_radius: "16px"
+        
+      stat_icon:
+        width: "60px"
+        height: "60px"
+        margin: "0 auto 24px"
+        
+      stat_number:
+        font_size: "48px"
+        font_weight: 700
+        color: "#FF6B6B"
+        line_height: 1
+        margin_bottom: "16px"
+        
+      stat_label:
+        font_size: "16px"
+        color: "#333333"
+        font_weight: 600
+        margin_bottom: "8px"
+        
+      stat_source:
+        font_size: "12px"
+        color: "#999999"
+
+  # ==========================================
+  # CASE STUDY
+  # ==========================================
+  - id: "case_study"
+    name: "実績紹介"
+    type: "detailed_case"
+    
+    content:
+      heading:
+        title: "実績紹介"
+        subtitle: "実際の運用結果"
+        
+      case:
+        client: "某美容サロン様"
+        category: "美容・サロン"
+        period: "2022年4月〜2023年12月（21ヶ月）"
+        
+        results:
+          - phase: "初回投稿"
+            metric: "再生回数"
+            value: "1,100PV"
+            image: "result_1.jpg"
+            
+          - phase: "3ヶ月目"
+            metric: "フォロワー"
+            value: "500人超え"
+            image: "result_2.jpg"
+            
+          - phase: "累計"
+            metric: "フォロワー"
+            value: "13,459人"
+            image: "result_3.jpg"
+            
+        highlights:
+          - "初回投稿から1,100PVを獲得"
+          - "3ヶ月でフォロワー500人突破"
+          - "21ヶ月で累計13,459フォロワー達成"
+          
+        testimonial:
+          text: "TikTok運用を始めて、来店数が3倍に増えました。若い世代の認知度が大幅に向上し、新規顧客獲得に成功しています。"
+          author: "某美容サロン 代表"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#F7F7F7"
+        
+      case_container:
+        max_width: "1000px"
+        margin: "0 auto"
+        background: "#FFFFFF"
+        border_radius: "24px"
+        padding: "60px"
+        
+      case_header:
+        text_align: "center"
+        margin_bottom: "60px"
+        
+      case_client:
+        font_size: "32px"
+        font_weight: 700
+        color: "#333333"
+        margin_bottom: "12px"
+        
+      case_period:
+        font_size: "16px"
+        color: "#666666"
+        
+      results_timeline:
+        display: "flex"
+        flex_direction: "column"
+        gap: "40px"
+        margin_bottom: "60px"
+        
+      result_item:
+        display: "grid"
+        grid_template_columns: "200px 1fr"
+        gap: "40px"
+        align_items: "center"
+        
+        mobile:
+          grid_template_columns: "1fr"
+          gap: "20px"
+          
+      result_image:
+        border_radius: "12px"
+        overflow: "hidden"
+        box_shadow: "0 4px 12px rgba(0, 0, 0, 0.1)"
+        
+      result_content:
+        display: "flex"
+        flex_direction: "column"
+        gap: "8px"
+        
+      result_phase:
+        font_size: "14px"
+        font_weight: 700
+        color: "#4ECDC4"
+        text_transform: "uppercase"
+        
+      result_metric:
+        font_size: "16px"
+        color: "#666666"
+        
+      result_value:
+        font_size: "40px"
+        font_weight: 700
+        color: "#FF6B6B"
+
+  # ==========================================
+  # SERVICE FEATURES
+  # ==========================================
+  - id: "service_features"
+    name: "サービス内容"
+    type: "service_breakdown"
+    
+    content:
+      heading:
+        title: "SparkBuzzのサービス内容"
+        
+      features:
+        - number: "01"
+          title: "月間PV10万回以上"
+          subtitle: "110万PVを達成した実績"
+          description: "プロの企画・撮影・編集で高品質な動画を制作。TikTokアルゴリズムを熟知したチームが、バズる動画を作ります。"
+          image: "feature1_pv.jpg"
+          stats:
+            - label: "平均再生回数"
+              value: "10万回+"
+            - label: "最高再生回数"
+              value: "110万回"
+              
+        - number: "02"
+          title: "フォロワー獲得保証"
+          subtitle: "500フォロワー獲得を保証"
+          description: "500フォロワー獲得を保証。未達成の場合は返金対応します。（6ヶ月契約の場合）"
+          image: "feature2_follower.jpg"
+          stats:
+            - label: "保証フォロワー数"
+              value: "500人"
+            - label: "平均獲得期間"
+              value: "3ヶ月"
+              
+        - number: "03"
+          title: "CPA1,500円以下"
+          subtitle: "広告配信でさらに効果を拡大"
+          description: "TikTok広告配信も対応。オーガニック投稿と広告を組み合わせて、効率的に認知を拡大します。"
+          image: "feature3_ad.jpg"
+          stats:
+            - label: "平均CPA"
+              value: "1,500円"
+            - label: "ROAS"
+              value: "300%+"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#FFFFFF"
+        
+      feature_item:
+        display: "grid"
+        grid_template_columns: "1fr 1fr"
+        gap: "80px"
+        align_items: "center"
+        max_width: "1200px"
+        margin: "0 auto 100px"
+        padding: "0 40px"
+        
+        last_child:
+          margin_bottom: "0"
+          
+        nth_child_even:
+          direction: "rtl"
+          
+          content:
+            direction: "ltr"
+        
+        tablet:
+          grid_template_columns: "1fr"
+          gap: "40px"
+
+  # ==========================================
+  # SERVICE MENU / PRICING
+  # ==========================================
+  - id: "service_menu"
+    name: "サービスメニュー"
+    type: "service_plans"
+    
+    content:
+      heading:
+        title: "service"
+        subtitle: "TikTok動画制作プラン"
+        
+      plans:
+        - name: "Spark Buzz"
+          subtitle: "TikTok動画制作"
+          price: "¥249,800"
+          duration: "1ヶ月契約"
+          description: "動画制作から投稿・分析まで一貫サポート"
+          
+          features:
+            - category: "動画制作"
+              items:
+                - "企画・撮影・編集"
+                - "PR動画制作（KPIに応じた動画本数）"
+                - "サムネイル制作"
+                - "キャプション作成"
+                
+            - category: "アカウント運用"
+              items:
+                - "TikTokアカウント運用代行"
+                - "投稿スケジュール管理"
+                - "コメント対応サポート"
+                
+            - category: "分析・改善"
+              items:
+                - "分析レポート（月1回）"
+                - "改善提案"
+                - "トレンド分析"
+                
+          cta:
+            text: "お問い合わせ"
+            link: "/question"
+            
+        - name: "Spark Buzz Tiktoker"
+          subtitle: "TikTokBUZZ配信"
+          price: "ASK"
+          description: "インフルエンサー起用でバズを加速"
+          
+          features:
+            - category: "インフルエンサー起用"
+              items:
+                - "TikToker選定"
+                - "TikTokerのフォロワー活用"
+                - "TikTokerのCM配信"
+                
+            - category: "動画制作"
+              items:
+                - "企画・撮影・編集"
+                - "PR動画制作（KPIに応じた動画本数）"
+                
+            - category: "広告配信"
+              items:
+                - "TikTok広告配信"
+                - "広告クリエイティブ制作"
+                - "配信最適化"
+                
+            - category: "分析・改善"
+              items:
+                - "分析レポート（月1回）"
+                - "ROI分析"
+                
+          cta:
+            text: "お問い合わせ"
+            link: "/question"
+            
+      additional_services:
+        - name: "動画撮影のみ"
+          price: "¥50,000〜/本"
+          
+        - name: "編集のみ"
+          price: "¥30,000〜/本"
+          
+        - name: "TikTok広告運用"
+          price: "月額100,000円〜"
+    
+    css:
+      section:
+        padding: "120px 0"
+        background: "#F7F7F7"
+        
+      plans_grid:
+        display: "grid"
+        grid_template_columns: "repeat(2, 1fr)"
+        gap: "32px"
+        max_width: "1200px"
+        margin: "0 auto 60px"
+        padding: "0 40px"
+        
+        tablet:
+          grid_template_columns: "1fr"
+
+  # ==========================================
+  # WORKS / VIDEO GALLERY
+  # ==========================================
+  - id: "works"
+    name: "制作事例"
+    type: "video_gallery"
+    
+    content:
+      heading:
+        title: "Latest WorKs"
+        subtitle: "制作動画事例"
+        
+      videos:
+        - thumbnail: "work_video1.jpg"
+          category: "美容サロン"
+          views: "85,000"
+          likes: "3,200"
+          
+        - thumbnail: "work_video2.jpg"
+          category: "飲食店"
+          views: "120,000"
+          likes: "5,400"
+          
+        - thumbnail: "work_video3.jpg"
+          category: "アパレル"
+          views: "95,000"
+          likes: "4,100"
+          
+        - thumbnail: "work_video4.jpg"
+          category: "IT企業"
+          views: "65,000"
+          likes: "2,800"
+          
+        - thumbnail: "work_video5.jpg"
+          category: "不動産"
+          views: "78,000"
+          likes: "3,600"
+          
+        - thumbnail: "work_video6.jpg"
+          category: "小売店"
+          views: "105,000"
+          likes: "4,900"
+    
+    css:
+      section:
+        padding: "100px 0"
+        background: "#FFFFFF"
+        
+      grid:
+        display: "grid"
+        grid_template_columns: "repeat(3, 1fr)"
+        gap: "24px"
+        max_width: "1200px"
+        margin: "0 auto"
+        padding: "0 40px"
+        
+        tablet:
+          grid_template_columns: "repeat(2, 1fr)"
+          
+        mobile:
+          grid_template_columns: "1fr"
+          
+      video_item:
+        position: "relative"
+        padding_top: "177.78%"  # 9:16 aspect ratio
+        border_radius: "12px"
+        overflow: "hidden"
+        cursor: "pointer"
+        
+        hover:
+          transform: "scale(1.02)"
+          
+      video_thumbnail:
+        position: "absolute"
+        top: "0"
+        left: "0"
+        width: "100%"
+        height: "100%"
+        object_fit: "cover"
+        
+      video_overlay:
+        position: "absolute"
+        bottom: "0"
+        left: "0"
+        width: "100%"
+        padding: "20px"
+        background: "linear-gradient(transparent, rgba(0, 0, 0, 0.8))"
+        color: "#FFFFFF"
+        
+      video_category:
+        font_size: "14px"
+        font_weight: 600
+        margin_bottom: "8px"
+        
+      video_stats:
+        display: "flex"
+        gap: "16px"
+        font_size: "12px"
+
+  # ==========================================
+  # HANDLING RANGE
+  # ==========================================
+  - id: "handling_range"
+    name: "対応範囲"
+    type: "process_grid"
+    
+    content:
+      heading:
+        title: "Handing range"
+        subtitle: "企画から分析まで一貫対応"
+        
+      processes:
+        - title: "企画"
+          icon: "idea_icon.svg"
+          description: "バズる動画の企画立案"
+          
+        - title: "撮影"
+          icon: "camera_icon.svg"
+          description: "プロカメラマンによる撮影"
+          
+        - title: "編集"
+          icon: "edit_icon.svg"
+          description: "TikTok最適化編集"
+          
+        - title: "投稿"
+          icon: "upload_icon.svg"
+          description: "最適なタイミングで投稿"
+          
+        - title: "分析"
+          icon: "analytics_icon.svg"
+          description: "データに基づく分析"
+          
+        - title: "改善"
+          icon: "improve_icon.svg"
+          description: "PDCAサイクルで改善"
+
+  # ==========================================
+  # INDUSTRIES
+  # ==========================================
+  - id: "industries"
+    name: "対応業種"
+    type: "industry_showcase"
+    
+    content:
+      heading:
+        title: "対応業種"
+        subtitle: "幅広い業種に対応"
+        
+      industries:
+        - name: "飲食店"
+          image: "industry_food.jpg"
+          description: "メニュー紹介・店内雰囲気"
+          
+        - name: "美容サロン"
+          image: "industry_beauty.jpg"
+          description: "ビフォーアフター・施術風景"
+          
+        - name: "IT企業"
+          image: "industry_it.jpg"
+          description: "サービス紹介・社内文化"
+          
+        - name: "小売店"
+          image: "industry_retail.jpg"
+          description: "商品紹介・使い方動画"
+          
+        - name: "アパレル"
+          image: "industry_fashion.jpg"
+          description: "コーディネート・商品紹介"
+          
+        - name: "不動産"
+          image: "industry_realestate.jpg"
+          description: "物件紹介・内見ツアー"
+          
+        - name: "フィットネス"
+          image: "industry_fitness.jpg"
+          description: "トレーニング動画・施設紹介"
+          
+        - name: "教育"
+          image: "industry_education.jpg"
+          description: "授業風景・学習コンテンツ"
+
+  # ==========================================
+  # FAQ
+  # ==========================================
+  - id: "faq"
+    name: "よくある質問"
+    type: "accordion_faq"
+    
+    content:
+      questions:
+        - q: "動画制作本数は月に何本ですか？"
+          a: "KPIに応じて最適な本数を提案します。通常は月4〜8本程度です。"
+          
+        - q: "撮影はどこで行いますか？"
+          a: "お客様の店舗・オフィスで撮影します。遠方の場合は交通費が別途かかります。"
+          
+        - q: "フォロワー保証は本当ですか？"
+          a: "6ヶ月契約の場合、500フォロワー獲得を保証します。未達成の場合は契約金額を返金します。"
+          
+        - q: "TikTokerの起用は可能ですか？"
+          a: "はい、Spark Buzz Tiktokerプランで対応可能です。予算や目的に応じて最適なTikTokerを選定します。"
+          
+        - q: "最低契約期間は？"
+          a: "1ヶ月から契約可能ですが、効果を実感いただくには3〜6ヶ月の継続をおすすめします。"
+
+  # ==========================================
+  # CTA
+  # ==========================================
+  - id: "cta"
+    name: "お問い合わせCTA"
+    
+    content:
+      heading: "TikTokで認知を拡大しませんか？"
+      description: "まずは無料相談から。現状分析と最適なプランをご提案します。"
+      cta:
+        text: "無料相談を予約する"
+        link: "/question"
